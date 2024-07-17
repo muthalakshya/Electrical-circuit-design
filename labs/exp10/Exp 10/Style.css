@@ -1,0 +1,604 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+.} */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #844208;
+    color: white;
+    /* padding: 1%; */
+    margin-bottom: 10%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.header .title {
+    flex-grow: 1;
+    text-align: center;
+    padding: 0%;
+    /* font-size: 25px; */
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header .title-text {
+    /* background-color:#b5b5ec;; */
+    padding: 0.1%;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+.header .instructions {
+    background-color: white;
+    border: none;
+    color: rgb(119, 108, 108);
+    padding: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    
+}
+
+.header .instructions:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.header .instructions:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.header .instructions:disabled {
+    background-color: #e0e0e0;
+    color: #a0a0a0;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+.divider {
+    border: none;
+    height: 5px;
+    background-color: #c3dffd;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    height: calc(100vh - 100px);
+}
+
+.content-inner{
+    width: 20%;
+}
+
+.sidebar {
+    /* height: 70%; */
+    width: 100%;
+    background-color: #f7d7a3e6;
+    overflow-y: auto;
+    padding: 10px;
+    color: white;
+}
+
+.sidebar .section {
+    margin-bottom: 20px;
+}
+
+.sidebar h3 {                                          /* components bar headings */
+    text-align: center;
+    color: #000000;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #0b0b0b;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+.sidebar h2 {
+    text-align: center;                                       
+    color: #000000;
+    /*font-size: 18px; */
+    text-transform: uppercase;
+    border-bottom: 2px solid #000000;
+    margin-top: 2%;
+    padding-bottom: 1%;
+    margin-bottom: 1%;
+}
+
+.components {
+    /* display: flex; */
+    /* flex-wrap: wrap;
+    justify-content: space-around; */
+    /* list-style: none; Remove black dots */
+    padding-left:20%;
+    /* margin:0 5%; */
+}
+
+.component-wrapper {
+    width: 80%;
+    height: 800%;
+    display: flex;
+    /* margin: 0;
+    padding: 0; */
+    justify-content: space-around;
+}
+
+.component-container {
+    width: 98%;
+    /* height: 100%; */
+    text-align: center;
+}
+#comp4{
+    width: 80%;
+    /* height: 200%; */
+    text-align: center;
+}
+#comp8,#comp9{
+    width: 80%;
+    text-align: center;
+}
+
+.component {
+    width: 70%;
+    height: 80%;
+    /* max-width: 80px; */
+    margin: 5px 2px;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+#component4{
+    width: 20%;
+    height: 70%;
+    /* max-width: 80px; */
+    margin: 5px 2px;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.component-label {                             /* Comopnent name text */ 
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    text-shadow: black;
+}
+
+.main-content {
+    /* width: 75%; */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.circuit-section {
+    background-image: url("images/Wood-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 85%;
+    height: 99%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    border: 2% solid #0e0e0e;
+    padding: 0 0.5%;
+    position: relative;
+    margin: 0.5% 0.5%;
+    /* height: calc(100% - 20px); */
+    background-color: #edd6ae;
+    box-shadow: 0 4px 8px rgba(245, 241, 238, 0.1);
+    border-radius: 5px;
+}
+.circuit-section:nth-child(2){
+    width: 38%;
+}
+
+.circuit-window {
+    background-image: url("images/wood.jpg");
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    border: 3px solid #030303;
+    margin-top: 1%;
+    position: relative;
+    background-color:#ffffff;
+}
+
+.button-group {
+    display: flex;
+    /* justify-content: space-between; */
+    position: relative;
+    width: 100%;
+    padding: 1%;
+}
+
+.footer {
+    background-color:#000000;
+    color: white;
+    text-align: center;
+    padding: 0.5%;
+    box-shadow: 0 -4px 8px rgba(239, 237, 234, 0.1);
+}
+
+
+
+
+
+main{
+    background-color: blueviolet; height: 700px; width: 1470px; padding: 1%;
+}
+.alert{
+    font-size: 60%;
+    position: absolute;
+    top:-100%;
+    height: 15%;
+    margin-left: 33%;
+    width: 20%;
+    border: 10px solid #dbdfdb;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    color:  #ffffff;
+    background-color: rgb(16, 14, 19);
+    border-radius: 10%;
+}
+/* #alert_text{
+    font-size: 150%;
+} */
+/* :hover.alert{
+    border: 10px solid #ffffff;
+} */
+#close{
+    height: 35%;
+    width: 14%;
+    margin-right: 2%;
+    font-size: 100%;
+    padding: 0%;
+    color: rgb(255, 255, 255);
+    background-color:  #ffffff;
+    border: none;
+}
+:hover#close{
+    border: 4px solid #f8a229;
+    color:  #f3a617;
+    background-color: white;
+}
+
+.instruction{
+    position: absolute;
+    height: 66%;
+    width: 99%;
+    background-color:  rgb(255, 255, 255);
+    border: 5px solid rgb(9, 9, 10);
+    padding:1%  0%;
+    top: -100%;
+    z-index: 1;
+    /* left: 1%; */
+    color: rgb(0, 0, 0);
+    transition: 1s;
+    display: flex;
+    justify-content: space-between;
+    font-size: large;
+}
+
+.instruction button{                  /* INSTRUCTIONS POPUP CROSS STYLING */
+    height: 100%;
+    cursor: pointer;
+    width: 100%;
+    margin-right: 2%;
+    font-size: 50px;
+    color:  #ed1f03;
+    border:none;
+    margin-left: auto;
+    border-radius: 35%;
+
+}
+
+
+.instruction button:hover{
+    box-shadow: 5px 5px 50px 5px #ff0000;
+}
+.instruction button:active{
+    background-color: rgb(4, 4, 3);
+}
+
+
+
+.controlBut{                                /* VERIFY & RESET BUTTON STYLING */
+    border: white;font-size: 100% ;height: 100%; width:30%;  color: white;
+    border-radius: 2%;
+    background-color: #f1a900;
+    padding: 0.5%;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #f5885a;
+    /* background-image: linear-gradient(to bottom, #007bff, #0056b3); */
+    margin: 0 10%;
+    color: black;
+}
+#controlVerify:nth-child(1){
+    height: 140%;
+    margin-top: -0.5%;
+}
+.headBut{                                           /* power circuit, control circuit button*/
+    height: 5%; width: 99%;  color: rgb(11, 11, 11); font-size: 140%;
+    font-weight: 900;
+    background-image: linear-gradient(to bottom, #ca673d, #f8ab5e);
+    text-align: center;
+    /* cursor: not-allowed; */
+    /* padding: 0.5%; */
+    margin-top: 0.7%;
+}
+#pc{
+    opacity: 0.5;
+}
+#cc{
+    cursor: pointer;
+}
+#cc:hover{
+   
+    box-shadow: 5px 5px 20px 5px #000000;
+    background-color: #eca10c;
+}
+/* #pc:hover{
+    box-shadow: 5px 5px 20px 5px #000000;
+    background-color: #4288DA;
+}
+#cc:active{
+    background-color: rgb(0, 0, 0);
+    color: whitesmoke;
+} */
+/* #pc:active{
+    background-color: rgb(93, 19, 190);
+} */
+
+.controlBut:hover{
+    background-color: rgb(242, 129, 64);
+    box-shadow: 5px 5px 8px 5px #f1f0ea;
+}
+.controlBut:active{
+    background-color: rgb(240, 148, 27);
+    background-image: linear-gradient(to bottom, #e6b410, #edb007);
+}
+
+
+.bar{                                    /* INSRUCTION BUTTON STYLING */
+   /* cursor: pointer;
+    
+    height: 100%;
+    width: 100%;
+    background-color: rgb(13, 31, 225);
+    
+    margin-left: 0%;
+    border-right: 5px solid rgb(5, 5, 5);
+    color: rgb(234, 204, 38);
+    text-align: center;
+   
+    padding-top: 0.5%;
+    font-size: 150%;
+    */
+
+   
+    cursor: pointer;
+    width: 98%;
+    /* height: 5%; */
+   
+    background-color:  rgb(231, 168, 104);
+   
+    margin: 1% 0 ;
+    border-right: 1px solid rgb(0, 1, 8);
+    color: rgb(0, 0, 0);
+    text-align: center;
+   
+    padding-top: 2.5%;
+    font-size: 150%;
+    border-radius: 2%;
+    font-weight: 700;
+
+    
+}
+.bar:hover{
+    box-shadow: 1px 1px 6px 7px #fcfbf9;
+    background-color: rgb(44, 186, 44);
+    color: rgb(255, 255, 255);
+}
+
+.bar:active{
+    background-color: rgb(255, 255, 255);
+    color: rgb(249, 158, 0);
+}
+.bar-reset{                             /* COMPLETE RESET BUTTON */
+  
+    height: 50%;
+    cursor: pointer;
+    width: 98%;
+   
+    background-color: rgb(198, 55, 55);
+   
+    margin: 1% 0;
+    border-right:1px solid rgb(1, 0, 8);
+    color: rgb(255, 255, 255);
+    text-align: center;
+
+    padding-top: 0.5%;
+    font-size: 150%;
+    border-radius: 2%;
+    font-weight: 600;
+}
+.bar-print{                              /* COMPLETE PRINT BUTTON */
+    height: 50%;
+    cursor: pointer;
+    width: 98%;
+   
+    background-color:  rgb(0, 51, 255);
+   
+    margin: 1% 0;
+    border-right: 1px solid rgb(1, 0, 8);
+    color: rgb(255, 255, 255);
+    text-align: center;
+   
+    padding-top: 0.5%;
+    font-size: 150%;
+    border-radius: 2%;
+    font-weight: 700;
+
+    
+}
+.bar-reset:hover{
+    box-shadow: 1px 1px 6px 7px #ff0000;
+    background-color:    rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+}
+.bar-reset:active{
+    background-color: rgb(248, 205, 13);
+    color: whitesmoke;
+}
+.bar-print:hover{
+    box-shadow: 5px 5px 20px 15px #0011ff;
+    background-color:  rgb(255, 255, 255);
+    color: rgb(4, 0, 255);
+}
+.bar-print:active{
+    background-color:  rgb(243, 243, 15);
+    color: whitesmoke;
+}
+
+
+.inner{
+    background-color: #000000;margin-top: 1%; height: 85%; width: 98%; text-align: center; font-size: 130%;padding: 1%;display: flex;
+}
+
+
+@media print {
+    .jsplumb-connector, .jsplumb-endpoint {
+        position: absolute !important;
+    }
+    /* Add other print-specific styles here */
+  }
+
+
+
+  .fan {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease; /* Smooth transition for rotation */
+  }
+  
+  /* Rotate the fan when the rotate class is applied */
+  .fan.rotate {
+    transform: rotate(360deg);
+  }
+
+  #controlReset{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    padding: 0;
+    height: 80%;
+  }
+
+.rotate {
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Adjust the size as needed */
+    transition: transform 10s linear;
+    
+}
+
+.rotating {
+    animation: spin 5s linear infinite;
+    animation-play-state: paused;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* width */
+#chg::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  #chg::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  #chg::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  #chg::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+
+
+  .image-container {
+    perspective: 1000px; /* Gives the 3D effect */
+}
+
+.image-container img {
+    width: 100px; /* Adjust size as needed */
+    animation: rotate3D 4s linear infinite;
+}
+
+@keyframes rotate3D {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 20px;
+    background-color: #ffffff;
+    border-radius: 50px;
+  }
+  
+  /* Track */
+  .sidebar::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  .sidebar::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  .sidebar::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+  .position-absolute {
+    position: absolute !important;
+  }

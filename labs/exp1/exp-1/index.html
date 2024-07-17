@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DC and AC Load Operation</title>
+    <link rel="stylesheet" href="Style.css">
+    <!-- <script src="./html2canvas.js"></script> -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsplumb@2.15.6/dist/js/jsplumb.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/dom-to-image-more/dist/dom-to-image-more.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" >
+
+</head>
+<body>
+    <div style="width: 1500px; height: 710px;background-color: rgb(255, 255, 255);position: relative;margin: auto; border:  3px solid black;"  id="main-box">
+        <div style="width: 100%; height: 10%;">
+            <header class="header">
+                <div class="title">
+                    <div class="title-text">
+                        <h3 style="margin: 0;">To operate DC and AC load with the help of a Push to ON switch and a Switching relay</h3>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div style="width: 100%; height: 85%;background-color: rgb(255, 255, 255);display: flex;">
+            <div style="width: 25%; height: 100%;background-color: rgb(255, 255, 255);">
+                <div style="width: 96%; height: 7%;background-color: rgb(255, 255, 255); display: flex;">
+                    <div class="bar"  id="instruct">Instructions</div>
+                </div>
+                <div style="width: 100%; height: 81%;background-color: rgb(59, 152, 82); display: flex;">
+                    <div class="sidebar">
+                        <h2>Components</h2>
+                        <div class="">
+                            <h3>Relay</h3>
+                            <div class="components" id="symbolsSection">
+                                <div class="component-wrapper"  >
+                                    <div class="component-container" id="comp1" style="margin-top: 0;margin-bottom: 0;">
+                                        <img src="images/relay img.png" alt="NO Relay" class="component" id="component1" style="width: 60%;height: 60%;margin-top: 0;">
+                                        <div class="component-label">Relay</div>
+                                    </div>
+                                    <div class="component-container" id="comp2">
+                                        <img src="images/No(R).png" alt="NO Relay" class="component" id="component2"  style="width: 60%;height: 56%;margin-left: 25%;">
+                                        <div class="component-label" id="component2-nor">No (R)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="sub-divider" style="margin-top: -10%;">
+                        <div class="section">
+                            <h3>Push open & close button</h3>
+                            <div class="components" id="symbolsSection">
+                                <div class="component-wrapper">
+                                    <div class=""  id="comp4">
+                                        <img src="images/red but4.png" alt="NO Relay" class="" id="component4">
+                                        <div class="component-label" id="component4-po">Push open button</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="sub-divider">
+                        <div class="section"  id="hide-btn" style="">
+                            <h3 class="fan-bulb-header">Fan</h3>
+                            <div class="components" id="supplySection">
+                                <div class="component-wrapper" id="bulbdiv">
+                                    <div class="component-container" style="items: center; width:160px; height:140px;" id="comp6">
+                                        <img src="images/fan5.png" alt="Component 7" class="component" id="component6">
+                                        <div class="component-label" id="component6-b">Fan</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="sub-divider">
+                        <div class="section" id="hide-switch" style="">
+                            <h3>Supply</h3>
+                            <div class="components" id="supplySection">
+                                <div class="component-wrapper">
+                                    <div class="" id="comp8">
+                                        <img src="images/Supply f1.png" alt="AC Switch Off 1" class="component" id="component8">
+                                        <div class="component-label">DC Supply</div>
+                                    </div>
+                                    <div class="" id="comp9">
+                                        <img src="images/power supply.png" alt="AC Switch Off 2" class="component" id="component9" >
+                                        <div class="component-label">AC Supply</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 97%; height: 10%;background-color: #ffffff;">
+                    <div class="bar-print">Print</div>
+                    <div class="bar-reset"  id="Reset">Reset</div>
+                </div>
+
+            </div>
+            <div style="width: 75%; height: 100%;background-color: rgb(255, 255, 255);display: flex;">
+                    <div class="circuit-section control"  id="Control">
+                        <div class="headBut" id="cc">
+                            <h2 style="margin-top: 0%;padding-top: 1%; font-size: 100%;">Control circuit</h2>
+                        </div>
+                        <div  class="circuit-window" style="display: flex; position: relative;">
+                            <img src="images/wood.jpg" alt="" style="position: absolute;width: 10%; height: 15%;top: 15%;left: 70%;opacity: 0;" id="red">
+                            <button style="width: 5%; height: 5%;position: absolute; left: 73%;top: 28%;border: rgb(77, 30, 30);opacity:0;background-color: #000000;" id="redd"></button>
+                            <button style="width: 5%; height: 5%;position: absolute; left: 73%;top: 14%;border: white;  opacity: 0;background-color: #000000;" id="redu"></button>
+                            <h6 style="position: absolute;top: 26%;left: 67%; color: #000000;font-weight: bolder;font-size: 90%;" id="redtext"></h6>
+
+                            <img src="images/wood.jpg" alt="" style="position: absolute;width: 12%; height: 34%;top: 50%;left: 68%;opacity: 0;" id="relay">
+                            <button style="width: 5%; height: 5%;position: absolute; left: 76%;top: 80%;border: white;background-color: #a71212;opacity: 0;" id="rd"></button>
+                            <button style="width: 5%; height: 5%;position: absolute; left: 70%;top: 50%;border: white;background-color: rgb(43, 255, 0);opacity: 0;" id="ru"></button>
+                            <button style="width: 2%; height: 4%;position: absolute; left: 76.5%;top: 72%;border: white;background-color: rgb(255, 0, 0);opacity: 0;" id="light"></button>
+                            <h6 style="position: absolute;width: 35%; height: 25%;top: 80%;left: 61%; color: #000000;font-weight: bolder;font-size: 90%;" id="relaytext"></h6>
+
+                            <img src="images/supply f2.png" alt="" style="position: absolute;width: 50%; height: 40%;top: 30%;left: 0%;opacity: 0;" id="dc">
+                            <img src="images/wood.jpg" alt="" style="position: absolute;width: 9%; height: 12%;top: 45%;left: 27%;opacity: 0;border-radius: 25%;" id="ndc">
+                            <img src="images/wood.jpg" alt="" style="position: absolute;width: 9%; height: 12%;top: 45%;left: 27%;border-radius: 25%;display: none;" id="dcload-control">
+                            <h6 style="position: absolute;width: 35%; height: 25%;top: 59%;left: 14%; color: #000000;font-weight: bolder;font-size: 90%;" id="dctext"></h6>
+                        </div>
+                        <div class="button-group" >
+                            <button class="controlBut" id="controlVerify">Check Connections (1)</button>
+                            <button class="controlBut" id="controlReset">Delete Connections (1)</button>
+                        </div>
+                    </div>
+                    <div class="circuit-section power"  id="PowerC">
+                        <div class="headBut" id="pc">
+                            <h2 style="margin-top: 0%;padding-top: 1%; font-size: 100%;">Power circuit</h2>
+                        </div>
+                        <div  class="circuit-window"  style="display: flex;position: relative;">
+                            <img src="images/power supply.png" alt="" style=" position:absolute ;width: 42%; height: 25%;padding-top: 2%;left: 2%;top: 35%;opacity: 0;" id="ac">
+                            <img src="images/s1.png" alt="" style="position: absolute;width: 9%; height: 12.5%;top: 46%;left: 24.5%;opacity: 0;border-radius: 25%;" id="nac">
+                            <img src="images/wood.jpg" alt="" style="position: absolute;width: 9%; height: 12%;top: 43%;left: 22%;border-radius: 25%;display: none;" id="dcload-power">
+                            <button style="width: 6%; height: 6%;position: absolute; left:  8.5%;top: 48.8%;border: white;background-color: #4f1515;opacity: 0;" id="acu"></button>
+                            <button style="width: 6%; height: 6%;position: absolute; left: 13.8%;top: 48.5%;border: white;background-color: #b36464;opacity: 0;" id="acd"></button>
+                            <h6 style="position: absolute;top: 58.5%;left: 4.5%; color: #000000;font-weight: bolder;font-size: 90%;" id="actext"></h6>
+
+                            <button style="width: 25%; height: 20%;position: absolute; left: 70%;top: 19.5%; border: rgba(255, 255, 255, 0);background-image: url(images/wood.jpg);opacity: 0;border: 3px solid red;" class="pressNor">
+                                <img src="images/No(R).png" alt="" style="width: 40%; height: 95%; position: absolute;top: 2%;left: 40%;" id="nor">
+                            </button>
+                            <button style="width: 6%; height: 6%;position: absolute; left: 72%;top: 22%;border: white;background-color: #ebb624;opacity: 0;" id="nu"></button>
+                            <button style="width: 6%; height: 6%;position: absolute; left: 72%;top: 30%;border: white;background-color: #ebb624;opacity: 0;" id="nd"></button>
+                            <h6 style="position: absolute;top: 20%;left: 86%; color: #000000;font-weight: bolder;font-size: 90%;" id="nortext"></h6>
+                            <h6 style="position: absolute;top: 34%;left: 74%; color: #000000;font-weight: bolder;font-size: 90%;" id="nordowntext"></h6>
+
+                            <button style="width: 25%; height: 25%;position: absolute; left: 68%;top: 58.2%;border: rgb(0, 0, 0);background-color: #000000;opacity:0;" class="bulbimg">
+                                <!-- <img src="images/fan1.jpg" alt="" style="width: 100%; height: 100%;" id="bulb" > -->
+                                <img src="images/wood.jpg" alt="" style="width: 92%; height: 102%; opacity: 0;" id="rotatingImage" class="rotate " >
+                                <img src="images/wood.jpg" alt="" style="width: 100%; height: 100%;display: none;" id="lamp" >
+                            </button>
+                            <button style="width: 6%; height: 6%;position: absolute; left: 70%;top: 85%;border: white;background-color: #ed9c50;opacity: 0;" id="bd"></button>
+                            <button style="width: 6%; height: 6%;position: absolute; left: 85%;top: 85%;border: white;background-color: #ed9c50;opacity: 0;" id="bu"></button>
+                            <h6 style="position: absolute;top: 78%;left: 77%; color: #000000;font-weight: bolder;font-size: 90%;" id="bulbtext"></h6>
+                            <h6 style="position: absolute;top: 86%;left: 74%; color: #000000;font-weight: bolder;font-size: 90%;" id="LoadName"></h6>
+                            <div style="width: 24%; height: 34%;position: absolute; left: 68%;top: 58%;opacity: 1;" id="fan-outer"></div>
+                            <div style="width: 25%; height: 34%;position: absolute; left: 68%;top: 49%;opacity: 0;border-bottom: 5px solid black;" id="fan-border"></div>
+                        </div>
+                        <div  class="button-group" >
+                            <button class="controlBut" id="powerVerify">Check Connections (2)</button>
+                            <button class="controlBut" id="powerReset">Delete Connections (2)</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div  style="width: 100%; height: 3%;background-color: rgb(255, 255, 255);">
+            <footer class="footer">
+                © 2024 Virtual Labs, IIT Roorkee
+            </footer>
+        </div>
+
+        <div class="alert">
+            <h1 id="alert_text"></h1>
+            <button id="close">❌</button>
+        </div>
+        <button style="width: 3%; height: 6%;position: absolute; left: 30.2%;  top: 50.2%;border: white;background-color: #9a2b2b;opacity: 0;" id="dcu"></button>
+        <button style="width: 3%; height: 6%;position: absolute; left: 31.9%;top: 50.2%;border: white;background-color: #170202;opacity: 0;" id="dcd"></button>
+
+
+        <div style="position: absolute;top: 22%; left: 63.5%;height: 3.5%;width: 34.5%;">
+            <div class="toggle-slider">
+                <input type="radio" name="toggle" id="ac-load" checked>
+                <label for="ac-load">AC Load</label>
+                <input type="radio" name="toggle" id="dc-load">
+                <label for="dc-load">DC Load</label>
+                <div class="slider"></div>
+            </div>
+        </div>
+        
+
+
+
+
+        <div class="instruction">
+            <div style="width: 50%;overflow-y: scroll;padding: 0 2%;" id="chg" >
+                <h2>Instructions</h2>
+                <p><strong>1. Click on the <span style="color: rgb(15, 107, 112);">Control Circuit </span>button in <span style="color: blue;">Control Circuit Section</span>.</strong></p>
+                <p><strong>2. Get the required components in <span style="color: blue;">Control Circuit Section</span> by clicking on components displayed in <span style="color: blue;">Components Section</span>.
+
+                </strong></p>
+                <p><strong>3. Establish the connections according to the <span style="color: rgb(15, 107, 112);">control circuit</span> diagram provided in <span style="color: red;">Fig. (a)</span>.</strong></p>
+                <p><strong>4. Verify the <span style="color: rgb(15, 107, 112);">control circuit</span> by clicking on the <span style="color: green;">Check Connections 1</span> button.</strong></p>
+                <p><strong>5. If <span style="color: rgb(59, 54, 54);">Wrong Connections</span> then click on <span style="color: rgb(204, 25, 12);">Delete Connections 1</span> button to delete connections and make the right connections .</p>
+                
+                <p><strong>6. Once the <span style="color: rgb(15, 107, 112);">Control Circuit</span> is verified, switch to the <span style="color: blue;">Power Circuit Section</span> , Choose between <span style="color: rgb(117, 14, 228);">AC Load</span> & <span style="color: rgb(117, 14, 228);"> DC Load </span>.</strong></p>
+                <p><strong>7. Get the required components in <span style="color: blue;">Power Circuit Section</span> by clicking on components displayed in <span style="color: blue;">Components Section</span>.</strong></p>
+                <p><strong>8. Make the connections according to the <span style="color: rgb(15, 107, 112);">Power Circuit</span> diagram provided in <span style="color: red;">Fig. (b)</span>.</strong></p>
+                <p><strong>9. Click on the <span style="color: green;">Check Connections 2</span> button to validate the <span style="color: rgb(15, 107, 112);">Power Circuit. </span></strong></p>
+                <p><strong>10. If <span style="color: rgb(59, 54, 54);">Wrong Connections</span> then click on <span style="color: rgb(204, 25, 12);">Delete Connections 2</span> button to delete connections and make the right connections .</p>
+                
+                <p><strong>11. Once the <span style="color: rgb(15, 107, 112);">Power Circuit</span> is verified, switch On the <span style="color: rgb(135, 224, 10);">Power Supplies</span> & Enable the <span style="color: rgb(148, 211, 30);">Push Button</span> by a mouse hover . </strong></p>
+                <p><strong>12. Click on the <span style="color: rgb(0, 0, 255);">Print</span> button to get a print of the webpage.</strong></p>
+                <p><strong>13. Click on the <span style="color: rgb(255, 0, 0);">Reset</span> button to refresh the webpage .</strong></p>
+
+                
+            </div>
+                <div style="width: 50%;display: flex;justify-content: space-between;margin: 0;padding: 6% 6%;">
+                    <img src="images/Instruction diagram.png" alt="" style="width: 180%;height: 100%;">
+                </div>
+                <div style="width: 4%;margin-left: auto;position: absolute;left: 94%;top: 5%;background-color: #f32c2c;">
+                    <button id="instruct-close">&times;</button>
+                </div>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.6/jsplumb.min.js"></script>
+<script src="script.js"></script>
+</html>

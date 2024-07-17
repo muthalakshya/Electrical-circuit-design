@@ -1,0 +1,518 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Virtual Labs | Electrical Circuit Design</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      name="viewport"
+    />
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.css" />
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css" />
+    <script>
+      window.onload = function () {
+        document.getElementById("theory").className = "active treeview";
+      };
+    </script>
+    <style>
+      #toggle_nav:hover {
+        background-color: #1261a0;
+      }
+
+      #aim {
+        background-color: #009dff;
+      }
+
+      #aim:hover,
+      #theory:hover,
+      #pretest:hover,
+      #procedure:hover,
+      #simulation:hover,
+      #result:hover,
+      #posttest:hover,
+      #references:hover {
+        background-color: #009dff;
+      }
+    </style>
+
+    <!-- Mathjs library -->
+
+    <script
+      async="true"
+      src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"
+    ></script>
+  </head>
+
+  <body class="hold-transition skin-blue sidebar-mini">
+    <!--Navigation Bar-->
+    <div class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#navbar-ex-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://iitr.ac.in"
+            ><span
+              ><img
+                src="images/iitrLogo.png"
+                style="margin-top: -15px; height: 50px; width: 400px;" /></span
+          ></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse"></div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <header class="main-header">
+        <!-- Logo -->
+        <a
+          href="../index.html"
+          class="logo"
+          style="
+            background-color: #009dff;
+            border-right: solid;
+            border-right-color: #1261a0;
+          "
+        >
+          <p align="center" style="font-size: 16px;">
+            <b>Electrical Circuit Design</b>
+          </p>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav
+          class="navbar navbar-static-top"
+          style="background-color: #009dff;"
+        >
+          <!-- Sidebar toggle button-->
+          <a
+            href="#"
+            class="sidebar-toggle"
+            data-toggle="offcanvas"
+            role="button"
+            id="toggle_nav"
+          >
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+          <section class="content-header">
+            <ol class="breadcrumb">
+              <li>
+                <a href="../index.html"
+                  ><i class="fa fa-dashboard"></i>Electrical Circuit Design</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >To design a logic for starting a 3-phase Induction Motor by
+                  Automatic Star- Delta Starter</a
+                >
+              </li>
+              <li class="active">Theory</li>
+            </ol>
+          </section>
+        </nav>
+      </header>
+
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar" style="background-color: #1261a0;">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group"></div>
+          </form>
+          <!-- /.sear ch form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu" style="background-color: #1261a0;">
+            <li class="treeview" id="aim">
+              <a href="index.html" id="aim">
+                <i class="fa fa-files-o" style="color: white;"></i>
+                <span style="color: white;">Aim</span>
+              </a>
+            </li>
+            <li class="treeview" id="theory">
+              <a href="theory.html" id="theory" onclick="theory()">
+                <i class="fa fa-files-o" style="color: white;"></i>
+                <span style="color: white;">Theory</span>
+              </a>
+            </li>
+            <!--   <li class="treeview" id="numerical">
+                    <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="program">
+                    <a href="program.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Program</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li> -->
+            <li class="treeview" id="pretest">
+              <a href="pretest.html" id="pretest">
+                <i class="fa fa-files-o" style="color: white;"></i>
+                <span style="color: white;">Pre Test</span>
+              </a>
+            </li>
+
+            <li class="treeview" id="procedure">
+              <a href="procedure.html" id="procedure">
+                <i class="fa fa-files-o" style="color: white;"></i>
+                <span style="color: white;">Procedure</span>
+              </a>
+            </li>
+            <li class="treeview" id="simulation">
+              <a href="simulation.html" id="simulation">
+                <i class="fa fa-laptop" style="color: white;"></i>
+                <span style="color: white;">Simulation</span>
+                <span class="pull-right-container"> </span>
+              </a>
+            </li>
+
+            <li class="treeview" id="posttest">
+              <a href=" posttest.html" id="posttest">
+                <i class="fa fa-files-o" style="color: white;"> </i>
+                <span style="color: white;">Post Test</span>
+                <span class="pull-right-container"> </span>
+              </a>
+            </li>
+            <li class="treeview" id="ref">
+              <a href="references.html" id="references">
+                <i class="fa fa-files-o" style="color: white;"></i>
+                <span style="color: white;">References</span>
+                <span class="pull-right-container"> </span>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1 align="center">
+            To design a logic for starting a 3-phase Induction Motor by
+            Automatic Star- Delta Starter<!-- Write experiment name here -->
+          </h1>
+        </section>
+        <!-- Main content -->
+        <section class="content">
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 2%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          ></p>
+          <h3>
+            <b
+              >Introduction to Star-Delta Starter for 3-Phase Induction Motor
+            </b>
+          </h3>
+
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 2%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            A 3-phase induction motor is an essential component in many
+            industrial applications due to its high efficiency, robustness, and
+            simplicity. However, directly starting such motors can result in
+            high inrush currents, causing voltage drops and mechanical stress.
+            To mitigate these issues, an automatic star-delta starter is used.
+            This starter initially connects the motor windings in a star
+            configuration to reduce the starting current and torque, and then
+            switches to a delta configuration for normal operation.
+            <br />
+          </p>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            The objective of this experiment is to design and implement a logic
+            for starting a 3-phase induction motor using an automatic star-delta
+            starter. The experiment involves the use of a Programmable Logic
+            Controller (PLC) to control the switching between star and delta
+            configurations, as well as to handle start, stop, and trip
+            conditions.
+          </p>
+
+          <h3><b>Star-Delta Starter </b></h3>
+
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            The star-delta starter is an electromechanical switch used to start
+            induction motors by reducing the initial starting current and
+            torque. The motor initially starts in a star configuration, where
+            the windings are connected in such a way that each winding receives
+            a reduced voltage. After a predetermined time, the windings are
+            reconfigured to a delta arrangement, where each winding receives the
+            full line voltage, allowing the motor to run at its rated speed and
+            torque.
+            <br />
+          </p>
+
+          <h3><b>Components: </b></h3>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            1. Contactors (Y1, Y2, Y3):
+          </p>
+
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 2%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            ● Main Contactor (K1): Connects the motor to the power supply. <br> 
+            ● Star Contactor (K2): Connects motor windings in star configuration. <br>
+            ● Delta Contactor (K3): Connects motor windings in delta
+            configuration. <br>
+          </p>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 2%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            2. Timer: Controls the duration for which the motor remains in the
+            star configuration before switching to delta.
+          </p>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 2%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            3. Overload Relay: Protects the motor from overcurrent conditions.
+          </p>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 2%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            4. Push Buttons:
+            <br />
+            ● Start Button (PB1): Initiates the start sequence. <br />
+            ● Stop Button (PB2): Stops the motor.
+          </p>
+
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 2%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            5. Indicators: Visual indicators (LEDs) to show the status of the
+            motor (starting, running, and fault conditions).
+          </p>
+
+          <h3><b>Circuit Description</b></h3>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            The provided diagrams illustrate the control and power circuits for
+            the star-delta starter controlled by a PLC.
+          </p>
+          <h3><b>Disadvantages of Unipolar PWM Single Phase Inverter</b></h3>
+          <h3><b>Control Circuit (Figure 1)</b></h3>
+          <center><img src="images\FIG-1.png" alt="relay" height="600" width="900" style="mix-blend-mode: darken; -webkit-filter:contrast(150%);"></center>
+          <center><b style="font-size:18px;">Fig. 1 CONTROL CIRCUIT </b></center>
+<br>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            ● The PLC inputs (X0, X1, X2) are connected to the start button
+            (PB1), stop button (PB2), and overload relay, respectively.
+            <br /><br />
+            ● The PLC outputs (Y0, Y1, Y2) control the main contactor, star
+            contactor, and delta contactor, respectively. <br /><br />
+            ● The circuit is powered by a DC supply for the control logic and an
+            AC supply for the motor operation. <br /><br />
+          </p>
+          <h3><b>Disadvantages of Unipolar PWM Single Phase Inverter</b></h3>
+          <h3><b>Power Circuit (Figure 2)</b></h3>
+          <center><img src="images\FIG-2.png" alt="relay" height="600" width="900" style="mix-blend-mode: darken; -webkit-filter:contrast(150%);"></center>
+          <center><b style="font-size:18px;">Fig. 2 POWER CIRCUIT </b></center>
+<br>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            ● The power circuit consists of the main contactor (C1), star
+            contactor (C2), and delta contactor (C3). <br /><br />
+            ● The motor windings are initially connected in a star configuration
+            through the star contactor and then switched to a delta
+            configuration through the delta contactor. <br /><br />
+          </p>
+          <h3><b>PLC Logic (Figure 3)</b></h3>
+          <center><img src="Exp 10/images/instruction plc.png" alt="relay" height="600" width="900" style="mix-blend-mode: darken; -webkit-filter:contrast(150%);"></center>
+          <center><b style="font-size:18px;">Fig. 3 LADDER LOGIC</b></center>
+<br>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            ● The ladder diagram in Figure 3 represents the PLC logic for
+            controlling the star-delta starter. <br /><br />
+            ● The start button (X0) initiates the sequence, while the stop
+            button (X1) halts the operation.
+            <br /><br />
+            ● The timer function is implemented in the PLC to manage the
+            transition from star to delta configuration.<br /><br />
+          </p>
+          <h3><b>Advantages</b></h3>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            1. Reduced Starting Current: The star-delta starter significantly
+            reduces the starting current, minimizing voltage drops and
+            mechanical stress.<br /><br />
+            2. Cost-Effective: It is a cost-effective method compared to other
+            soft starting techniques.<br /><br />
+            3. Smooth Operation: Provides a smooth transition from start to full
+            speed operation, protecting the motor and the connected
+            equipment.<br /><br />
+            4. Ease of Implementation: The use of PLC for control logic allows
+            for easy implementation and customization.
+            <br /><br />
+          </p>
+          <h3><b>Applications</b></h3>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            1. Industrial Machinery: Widely used in starting large motors in
+            industries like manufacturing, textiles, and petrochemicals.<br /><br />
+            2. Pumps and Compressors: Commonly employed in starting large pumps
+            and compressors to avoid high inrush currents.<br /><br />
+            3. HVAC Systems: Used in large heating, ventilation, and air
+            conditioning systems.<br /><br />
+            4. Conveyor Systems: Applied in conveyor systems to ensure smooth
+            startup and operation.
+            <br /><br />
+          </p>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            Implementing an automatic star-delta starter using PLC provides an
+            efficient and reliable method for starting 3-phase induction motors.
+            By reducing the initial starting current and providing a smooth
+            transition to full load operation, this method ensures the longevity
+            and optimal performance of the motor and the connected system.
+          </p>
+        </section>
+        <!-- /.content -->
+      </div>
+      <footer class="main-footer">
+        <h4 align="center">
+          Lab contributed by : Jodhpur Institute of Engineering & Technology
+          <!-- Institute Name -->
+        </h4>
+      </footer>
+    </div>
+  </body>
+</html>
+<script>
+  function theory() {
+    document.getElementById("theory").style.backgroundColor = "#009dff";
+  }
+</script>
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

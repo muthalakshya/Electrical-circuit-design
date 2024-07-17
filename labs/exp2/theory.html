@@ -1,0 +1,370 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Virtual Labs | Electrical circuit design Lab </title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+  <script>
+    window.onload = function () {
+      document.getElementById("theory").className = "active treeview";
+    }
+  </script>
+  <style>
+    #toggle_nav:hover {
+      background-color: #1261A0;
+    }
+
+    #aim {
+      background-color: #009dff;
+    }
+
+    #aim:hover,
+    #theory:hover,
+    #pretest:hover,
+    #procedure:hover,
+    #simulation:hover,
+    #result:hover,
+    #posttest:hover,
+    #references:hover {
+      background-color: #009dff;
+    }
+  </style>
+
+  <!-- Mathjs library -->
+
+  <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <!--Navigation Bar-->
+  <div class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://iitr.ac.in"><span><img src="images/iitrLogo.png"
+              style="margin-top:-15px;height:50px;width: 400px;"></span></a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <header class="main-header">
+      <!-- Logo -->
+      <a href="../index.html" class="logo"
+        style="background-color:#009dff; border-right:solid;border-right-color: #1261A0;">
+        <p align="center" style="font-size:16px;"><b>Electrical Circuit Design</b></p>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top" style="background-color:#009dff;">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" id="toggle_nav">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <section class="content-header">
+          <ol class="breadcrumb">
+            <li>
+              <a href="../index.html"><i class="fa fa-dashboard"></i>Electrical Circuit Design lab</a>
+            </li>
+            <li>
+              <a href="#">To operate DC and AC load with the help of Push-to-ON and OFF switch and a Switching Relay with holding circuit.</a>
+            </li>
+            <li class="active">Theory</li>
+          </ol>
+        </section>
+      </nav>
+    </header>
+
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar" style="background-color:#1261A0;">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+          <div class="input-group"></div>
+        </form>
+        <!-- /.sear ch form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" style="background-color:#1261A0;">
+          <li class="treeview" id="aim">
+            <a href="index.html" id="aim">
+              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Aim</span>
+
+            </a>
+          </li>
+          <li class="treeview" id="theory">
+            <a href="theory.html" id="theory" onclick="theory()">
+              <i class="fa fa-files-o" style="color:white;"></i>
+              <span style="color:white;">Theory</span>
+            </a>
+          </li>
+          <!--   <li class="treeview" id="numerical">
+                    <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="program">
+                    <a href="program.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Program</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li> -->
+          <li class="treeview" id="pretest">
+            <a href="pretest.html" id="pretest">
+              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Pre Test</span>
+
+            </a>
+          </li>
+
+          <li class="treeview" id="procedure">
+            <a href="procedure.html" id="procedure">
+              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Procedure</span>
+            </a>
+          </li>
+          <li class="treeview" id="simulation">
+            <a href="simulation.html" id="simulation">
+              <i class="fa fa-laptop" style="color:white;"></i>
+              <span style="color:white;">Simulation</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+
+
+
+          <li class="treeview" id="posttest">
+            <a href=" posttest.html" id="posttest">
+              <i class=" fa fa-files-o" style="color:white;">
+              </i>
+              <span style="color:white;">Post Test</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+          <li class="treeview" id="ref">
+            <a href="references.html" id="references">
+              <i class="fa fa-files-o" style="color:white;"></i>
+              <span style="color:white;">References</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1 align="center">
+          To operate DC and AC load with the help of Push-to-ON and OFF switch and a Switching Relay with holding circuit.<!-- Write experiment name here -->
+        </h1>
+      </section>
+      <!-- Main content -->
+      <section class="content">
+        <h2><b>Introduction </b></h2>
+
+        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          In this experiment, we aim to explore the principles of load control with holding using switching relays and a holding circuit. The push-to-ON & OFF switch, is a momentary switch, so to run the load we have to keep the push button pressed continuously. So, to hold the load in its ON condition without needing to keep the push button pressed we are using a holding circuit in this experiment.
+</p>
+
+        <h3><b> ● Push-to-ON switch: </b></h3>
+
+
+        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          In this experiment we are using a Push-to-ON switch. It is a NO (Normally Open)
+          switch. It changes its state to NC (Normally Closed) when it is pressed. It is a momentary switch which
+          means that it will change its state and remain in it until it is pressed only. As soon as it is released it will
+          go back to its default state. Its mechanism involves a spring-loaded button that completes the circuit until it is
+          kept pressed. By default, this button has red colour in the simulation and when it is pressed it turns green. Upon
+          release, the switch returns to its default OFF state (Red colour).</p>
+
+
+          <h3><b> ● Push-to-OFF switch: </b></h3>
+
+
+        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          In this experiment we are using a push-to-OFF switch for turning the load OFF. It is a NC (Normally Closed) switch. It changes its state to NO (Normally Open) when it is pressed. It is a momentary switch which means that it will change its state and remain in it until it is pressed only. As soon as it is released it will go back to its default state. Its mechanism involves a spring-loaded button that completes the circuit until it is kept pressed. By default, this button has green colour in the simulation and when it is pressed it turns red. Upon release, the switch returns to its default OFF state (Green colour).</p>
+
+        <!-- <center><img src="images\structure.jpg" alt="structure" height="400" width="700" style="mix-blend-mode: darken; -webkit-filter:contrast(120%);"></center>
+        <center><b style="font-size:18px;">Fig. 1 Structure of IGBT</b></center><br>
+
+        <center><img src="images\symbol.png" alt="symbol" height="200" width="200" style="mix-blend-mode: darken; -webkit-filter:contrast(220%);"></center>
+        <center><b style="font-size:18px;">Fig. 2 Symbol of IGBT</b></center> -->
+
+        <!-- <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          When collector is made positive with respect to the emitter, the IGBT is forward biased. When voltage is not applied between gate and emitter, the junction J2 between N- region and P region is reverse biased, hence no current flows from collector to emitter.<br>
+
+          When gate is applied with positive voltage with respect to emitter by source V<sub>G</sub>, with gate-emitter voltage greater than threshold voltage (V<sub>GET</sub>) of the IGBT, then n-channel or inversion layer is induced in the upper part of p-region just below the gate. This n-channel short circuits the N--region with the N+-emitter regions.<br>
+
+          Electrons start to flow from N+ region to N- region through the n-channel. Since the IGBT is forward biased, hence the P+ collector region injects holes into the N- drift region, so that the injection carrier density in the N- drift region increases extensively and in turn, the conductivity of N- region increases significantly. Hence the IGBT gets turned ON and starts to conduct forward collector current I<sub>C</sub>.<br>
+
+          The collector current (I<sub>C</sub>) or emitter current (I<sub>E</sub>) consists of two components viz. one is Hole Current (I<sub>h</sub>) due to the injected holes and another is Electron Current (I<sub>e</sub>) due to injected electrons.<br>
+        </p> -->
+
+        <h3><b>● Switching relay:</b></h3>
+
+        
+        <center><img src="images\relay.jpg" alt="relay" height="350" width="500" style="mix-blend-mode: darken; -webkit-filter:contrast(150%);"></center>
+        <center><b style="font-size:18px;">Fig. 1 Relay </b></center>
+
+
+        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          It is an electromechanical device used for switching and protection purposes in electrical
+systems. It comprises an electromagnetic coil and a set of contacts, including NO (Normally Open), NC
+(Normally Closed), and COM (Common). When the coil of the relay is energized, a magnetic field is generated in
+it and this magnetic field attracts the metallic strip, causing the NC contacts to become NO. These contacts can be
+connected in series with load to turn the load on or off. This ensures that the load circuit and control circuit are
+electrically isolated. The working of the single channel relay is shown in Fig.: 2 below. </p>
+
+<center><img src="images\relay-single-channel.jpg" alt="contorl circuit" height="250" width="250" style="mix-blend-mode: darken; -webkit-filter:contrast(120%);"></center>
+<center><b style="font-size:18px;">Fig. 2 Relay Switching </b></center>
+<p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+
+In this experiment we are using a four channel (4 C/O) relay. It is a plug-in relay which means that it is inserted
+in a base (a pre-wired socket). A relay is shown in fig. (1). A four-channel relay has 4 terminals for
+Common, NC and NO each and 2 terminals for power supply (total 14 terminals).
+          <center><img src="images\relay-base.jpg" alt="relay-base" height="400" width="500" style="mix-blend-mode: darken; -webkit-filter:contrast(120%);"></center>
+        <center><b style="font-size:18px;">Fig. 3 Relay base</b></center></p>
+
+
+        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+
+          <!-- VI characteristics of IGBT is also known as Static or Output Characteristics. Let us now discuss the required circuit diagram and VI characteristics. The circuit comprises of voltage source V<sub>CC</sub> to make the IGBT (Insulated Gate Bipolar Transistor) collector-emitter forward biased, resistor R<sub>s</sub> in series with the gate circuit and resistance R<sub>GE</sub> connected in shunt with gate-emitter.<br>
+          The gate-emitter voltage (V<sub>GE</sub>) is varied and the collector-emitter voltage (V<sub>CE</sub>) and collector current (I<sub>C</sub>) is measured. Then a plot between I<sub>C</sub> & V<sub>CE</sub> is drawn. This plot is the required static characteristics of IGBT.
+          When the device is forward biased, the shape of output characteristics is similar to that of BJT. However, the controlling parameter in case of IGBT is V<sub>GE</sub> as it is a voltage-controlled device.
+          When the device is reversed biased, there is a voltage beyond which breakdown occurs. This reverse voltage is shown to be VRM.
+          There is a maximum voltage in forward conduction mode beyond which collector-emitter breakdown occurs and gate losses control of collector current. -->
+          
+
+        </p>
+        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;"><h3><b>About Experiment</b></h3></p>
+
+        <h3><b>  Control circuit:  </b></h3>
+
+        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+
+          The control circuit of this experiment consists of a push-to-ON and a push-to-OFF switch in series with the coil of the relay. When a momentary switch is used it should be pressed continuously for the load to run continuously, which means that a push-to-ON switch allows current to flow only until it is kept pressed. So to run the load continuously, without needing to keep the push-to-ON switch pressed, we are using a holding circuit which allows the flow of current even when the push-to-ON switch is released. 
+        </p>
+        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          1. Activation of the relay: The push-to-ON switch is used to turn the load ON.  When the push-to-ON switch is pressed, it momentarily completes the circuit. This allows current to flow through the relay coil and energize it. As the relay gets energized its contacts change their state and the NO contacts get closed. These closed contacts power both the AC and DC load. Simultaneously, the holding circuit is activated. 
+        </p>
+        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          2. Maintaining of the relay state (Holding circuit): The holding circuit consists of a NO contact of relay in parallel with the push-to-ON switch. When we press the push-to-ON switch the coil gets energized. After the coil gets energized, the NO contact of the relay in parallel with the push-to-ON switch becomes NC immediately. This NC will now go back to its default state (NO) only when the relay is de-energized. Now, when we release the push-to-ON switch the circuit is completed by that NC contact. Hence, the circuit remains closed even after releasing the push button. In this way holding of the relay in ON state is achieved.
+        </p>
+
+        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          3. Deactivation of the relay: The push-to-OFF switch is used to turn the load OFF. When this switch is not pressed it remains in NC (Normally Closed) state and when it is pressed it becomes NO (Normal Open) due to which the circuit opens and the relay coil gets de-energized. As the coil of relay gets de-energized its NC contact in parallel with the push button becomes NO and hence the circuit opens, turning the load OFF.
+
+        <center><img src="images/control ckt2.jpg" alt="contorl circuit" height="350" width="250" style="mix-blend-mode: darken; -webkit-filter:contrast(120%);"></center>
+        <center><b style="font-size:18px;">Fig. 4 Contol Circuit </b></center>
+
+        <h3><b> Power circuit: </b></h3>
+        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          The power circuit of this experiment consists of NO contact of relay in series with the load (AC/DC). When the relay is energized this NO contact becomes NC which completes the circuit and turns ON the load.
+          </p>
+          <p  style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          To turn the load OFF, push-to-OFF switch is pressed. It becomes NO (Normally Open) when it is pressed due to which the control circuit becomes open and the relay coil gets de-energized.
+          
+        </p>
+        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+              <strong>DC load :</strong>  The DC load is supplied by a DC source. The COM (common) terminal of the relay is connected to the positive of the power supply and the NO terminal of relay is connected to DC load. The other terminal of the DC load is connected to the negative terminal of the power source. 
+
+        </p>
+
+        <center><img src="images/circuit.png"power ckt 1" height="350" width="250" style="mix-blend-mode: darken; -webkit-filter:contrast(120%);"></center>
+        <center><b style="font-size:18px;">Fig. 5 Power Circuit for DC Load</b></center>
+     
+        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+        <strong>AC load: </strong> The AC load is supplied by a 230 V and 50 Hz AC source. One terminal of the load is connected to NO contact of Relay and the other terminal of load is connected to the neutral of the supply. The other terminal of the NO contact is connected to the phase of AC supply. AC load can be a motor, fan, etc
+      </p>
+
+        <center><img src="images/circuit2.png" alt="power ckt 2" height="350" width="310" style="mix-blend-mode: darken; -webkit-filter:contrast(120%);"></center>
+        <center><b style="font-size:18px;">Fig. 6 Power Circuit for AC Load</b></center>
+
+       
+
+      
+        <!-- <h3><b>Advantages of IGBT</b></h3>
+        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+
+          1.  IGBTs can handle high voltages and currents, making them suitable for high-power applications such as motor drives, power inverters, and industrial equipment.<br><br>
+
+          2. IGBTs have a low voltage drop across the device when it is conducting, resulting in reduced power dissipation and higher efficiency.<br><br>
+
+          3. IGBTs have faster switching speeds compared to traditional power BJTs, which enables them to operate at higher frequencies and reduces switching losses.<br><br>
+
+          4. IGBTs have a voltage-controlled gate, like a MOSFET, which requires less current to drive the gate compared to a BJT. This simplifies the gate drive circuitry and control requirements.<br><br>
+
+          5. IGBTs typically have low on-resistance, leading to lower conduction losses and higher efficiency in power applications.<br><br>
+
+          6. IGBTs have a rugged structure that allows them to withstand high voltage and current stresses, making them reliable and suitable for demanding applications.<br><br>
+
+          7. IGBTs have inherent short-circuit protection due to their positive temperature coefficient characteristics, which helps prevent catastrophic failures under fault conditions.<br><br>
+
+          8. IGBTs are available in a wide range of voltage and current ratings, providing flexibility in designing various power electronics applications.<br><br>
+
+          9. Since IGBTs require relatively low gate drive power compared to other power devices, the overall system complexity and power losses are reduced.
+
+          </p> -->
+
+       
+        <!--Theory of experiment -->
+
+      </section>
+      <!-- /.content -->
+    </div>
+    <footer class="main-footer">
+      <h4 align="center">Lab contributed by : Jodhpur Institute of Engineering & Technology<!-- Institute Name --> </h4>
+    </footer>
+  </div>
+
+</body>
+
+</html>
+<script>
+  function theory() {
+    document.getElementById("theory").style.backgroundColor = "#009dff";
+
+  }
+
+
+</script>
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

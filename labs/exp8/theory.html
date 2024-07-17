@@ -1,0 +1,357 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Virtual Labs | Power Electronics Lab </title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+  <script>
+    window.onload = function () {
+      document.getElementById("theory").className = "active treeview";
+    }
+  </script>
+  <style>
+    #toggle_nav:hover {
+      background-color: #1261A0;
+    }
+
+    #aim {
+      background-color: #009dff;
+    }
+
+    #aim:hover,
+    #theory:hover,
+    #pretest:hover,
+    #procedure:hover,
+    #simulation:hover,
+    #result:hover,
+    #posttest:hover,
+    #references:hover {
+      background-color: #009dff;
+    }
+  </style>
+
+  <!-- Mathjs library -->
+
+  <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <!--Navigation Bar-->
+  <div class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://iitr.ac.in"><span><img src="images/iitrLogo.png"
+              style="margin-top:-15px;height:50px;width: 400px;"></span></a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <header class="main-header">
+      <!-- Logo -->
+      <a href="../index.html" class="logo"
+        style="background-color:#009dff; border-right:solid;border-right-color: #1261A0;">
+        <p align="center" style="font-size:16px;"><b>Power Electronics Lab</b></p>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top" style="background-color:#009dff;">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" id="toggle_nav">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <section class="content-header">
+          <ol class="breadcrumb">
+            <li>
+              <a href="../index.html"><i class="fa fa-dashboard"></i>Power Electronics Lab</a>
+            </li>
+            <li>
+              <a href="#">Step-down Chopper with R Load</a>
+            </li>
+            <li class="active">Theory</li>
+          </ol>
+        </section>
+      </nav>
+    </header>
+
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar" style="background-color:#1261A0;">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+          <div class="input-group"></div>
+        </form>
+        <!-- /.sear ch form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" style="background-color:#1261A0;">
+          <li class="treeview" id="aim">
+            <a href="index.html" id="aim">
+              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Aim</span>
+
+            </a>
+          </li>
+          <li class="treeview" id="theory">
+            <a href="theory.html" id="theory" onclick="theory()">
+              <i class="fa fa-files-o" style="color:white;"></i>
+              <span style="color:white;">Theory</span>
+            </a>
+          </li>
+          <!--   <li class="treeview" id="numerical">
+                    <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="program">
+                    <a href="program.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Program</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li> -->
+          <li class="treeview" id="pretest">
+            <a href="pretest.html" id="pretest">
+              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Pre Test</span>
+
+            </a>
+          </li>
+
+          <li class="treeview" id="procedure">
+            <a href="procedure.html" id="procedure">
+              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Procedure</span>
+            </a>
+          </li>
+          <li class="treeview" id="simulation">
+            <a href="simulation.html" id="simulation">
+              <i class="fa fa-laptop" style="color:white;"></i>
+              <span style="color:white;">Simulation</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+
+
+
+          <li class="treeview" id="posttest">
+            <a href=" posttest.html" id="posttest">
+              <i class=" fa fa-files-o" style="color:white;">
+              </i>
+              <span style="color:white;">Post Test</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+          <li class="treeview" id="ref">
+            <a href="references.html" id="references">
+              <i class="fa fa-files-o" style="color:white;"></i>
+              <span style="color:white;">References</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1 align="center">
+          Step-down Chopper with R Load<!-- Write experiment name here -->
+        </h1>
+      </section>
+      <!-- Main content -->
+      <section class="content">
+        <h3><b>Introduction </b></h3>
+
+        
+
+        <p style="font-size:130%; margin-top:2%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+
+          A Step-down Chopper, also known as a Buck Chopper, is an electronic circuit used to control the output voltage of a DC power source to a lower level. It is commonly used in applications where a variable or reduced DC voltage is required, 
+          such as in battery charging systems, voltage regulators, or motor speed control. The basic working principle of a Step-down Chopper involves the periodic switching of a semiconductor switch (usually a transistor) to control the output voltage. The chopper 
+          operates in a time-varying ON-OFF mode, where the switch turns ON and OFF repeatedly at a certain frequency.<br>
+        <center> <img src="images\Fig 1.PNG "height=270px; style="mix-blend-mode: darken; -webkit-filter: contrast(250%);"></center>       
+        <center><b style="font-size: 19px;">Fig. 1 Circuit diagram of Step-down chopper</b></center>
+          </p>
+          
+            
+
+        <h3 align="left" style="margin-top:2.5%"><b>Working Principle of Step-down Chopper</b> </h3>
+          
+        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          To understand the working principle, let us first have a look at an equivalent circuit diagram of step-down chopper. This is shown in Fig. 1. 
+          The chopper is shown within a dotted line and assumed to be a switch. This circuit consists of inductor L, a free-wheeling diode, chopper CH, 
+          Source and Load. Fixed DC input voltage Vs is applied and our aim is to get the variable DC output voltage which is a function of chopper. 
+          To get the variable DC voltage, we will switch ON and OFF the chopper CH at some frequency called the chopping frequency (f).
+          </p>
+        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          <b>When Chopper CH is switched ON:</b> When CH is switched ON, the source is directly connected to load and hence the output voltage V<sub>o</sub> becomes equal to V<sub>s</sub>. 
+          The time period for which chopper is kept ON is called ON Time of chopper and represented by T<sub>ON</sub>. Thus, V<sub>o</sub> will be equal to V<sub>s</sub> for time T<sub>ON</sub>. 
+          The waveform of output voltage and time is shown in figure below.
+        </p> 
+        
+        <center> <img src="images\Fig 2.PNG "style="mix-blend-mode: darken; -webkit-filter: grayscale(100%); filter: grayscale(100%);" height=300px;></center>
+        <center><b style="font-size: 19px;">Fig. 2 The waveform of output voltage and time</b></center>
+
+        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          During the ON period of chopper, the current will build in the load exponentially and will reach its maximum value at the end of T<sub>ON</sub> 
+          (It is assumed that T<sub>ON</sub> is less than the time required for load current to reach its steady state value). This, simply means that 
+          the maximum value of load current i<sub>o</sub> will be less than the steady state value. The waveform of load current and time of step-down 
+          chopper is shown in figure below.
+        
+          <center> <img src="images\Fig 3.PNG "style="mix-blend-mode: darken; -webkit-filter: grayscale(100%); filter: grayscale(100%);" height=300px;></center>
+        <center><b style="font-size: 19px;">Fig. 3 The waveform of load current during T<sub>ON</sub></b></center>
+        
+      </p>
+        
+      <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+        In the above figure, the load current during T<sub>ON</sub> time is shown linearly increasing with time. This is because the chopping frequency is high 
+        and hence T<sub>ON</sub> is very less. For a small time period, the exponential rise of current may be approximated to the linear rise.
+
+      </p>
+
+      <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+        <b>When Chopper CH is switched OFF:</b> When chopper in figure-1 is switched OFF, the load is disconnected from the source V<sub>s</sub> and 
+        hence load voltage V<sub>o</sub> will be zero during the entire period for with CH is OFF. The time for which chopper is kept OFF is known as OFF time 
+        and represented by T<sub>OFF</sub>, the current through the inductor L (i<sub>o</sub>) cannot suddenly drop to zero. Rather, it starts decreasing and 
+        hence the polarity of induced emf across the inductor reverses, This induced emf of inductor makes free-wheeling diode forward biased and hence, 
+        free-wheeling diode (D) acts as a short during T<sub>OFF</sub>. Thus, the load current continues to decay through inductor L, free-wheeling diode D and 
+        load even though the source V<sub>s</sub> is disconnected as shown in Figure 3. The load current reaches its minimum value during OFF time and then 
+        CH is again switched ON.
+      </p> 
+      
+      <h3 align="left" style="margin-top:1.5%"><b> Derivation of Average Output DC Voltage</b> </h3>
+      <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+        To find the average output DC voltage, carefully observe the V<sub>o</sub> vs time waveform shown earlier and notice that V<sub>o</sub> is equal 
+        to V<sub>s</sub> for T<sub>ON</sub> time and is zero for T<sub>OFF</sub> time. As we know that average value of any periodic function f(x) with 
+        time period T is given as below.
+        <center style="font-size: 18px;"> `1/T &Integral;_0^T f(x) dx......(1)` </center>
+      </p>
+      
+      
+      
+      <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+        Therefore, using the above formula we can easily find the value of average value of output voltage of Step-down chopper. 
+        It should be noted that the time period of chopper DC Output Voltage Waveform is T = T<sub>ON</sub> + T<sub>OFF</sub>. The formula for output voltage of chopper is<br>
+
+      <center style="font-size: 18px;"> `V_o = 1/T &Integral;_0^(T_(ON)) V_s* dt + &Integral;_0^(T_(OFF)) 0* dt` </center><br>
+
+      <center style="font-size: 18px;"> `V_o = (V_s*T_(ON))/T......(2)` </center>
+      </p>
+
+      <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+      Since, duty cycle α given by
+      <center style="font-size: 18px;"> `α= T_(ON)/T......(3)` </center><br>
+      <center style="font-size: 18px;"> `V_o = α*V_s......(4)` </center>
+      </p>
+      <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+      Output current is given by 
+        <center style="font-size: 18px;"> `i_o = (α*V_s)/R......(5)` </center>
+
+    </p>
+    <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+    The rms output voltage is
+    <center style="font-size: 18px;"> `V_(rms) = &Sqrt; 1/T &Integral;_0^(T_(ON)) V_s^2* dt = V_s &Sqrt;T_(ON)/T` </center><br>
+    <center style="font-size: 18px;"> `V_(rms) =  V_s* &Sqrt;α......(6)` </center>
+  </p>
+      <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+      
+        From the above formula, it can be concluded that the output voltage of step-down chopper can be varied 
+        from zero to source voltage V<sub>s</sub>, This is achieved by varying the duty cycle (α).
+        
+      </p>
+
+
+
+    
+      <h3 align="left" style="margin-top:1.5%"><b> Advantages of Step-down Chopper </b> </h3>
+          <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+            
+            <b>1. Voltage Reduction:</b> The primary advantage of a step-down chopper is its ability to reduce the output voltage from a higher level to a lower level efficiently. This feature is valuable in applications where the input voltage exceeds the requirements of the load or system.<br><br>
+
+            <b>2. Efficiency:</b> Step-down choppers can achieve high conversion efficiency, especially when operating in Continuous Conduction Mode (CCM). By storing and transferring energy through the inductor, the chopper minimizes energy losses during the conversion process.<br><br>
+
+            <b>3. Regulation and Control:</b> Step-down choppers allow for precise regulation and control of the output voltage. By adjusting the duty cycle of the chopper's switch, the output voltage can be varied as needed to match the load requirements.
+          </p>
+          <h3 align="left" style="margin-top:1.5%"><b> Disadvantages of Step-down Chopper </b> </h3>
+            <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+            
+              <b>1. Higher Component Stress:</b> In step-down choppers, the inductor and switch experience higher current stresses, especially during the switch turn-on phase. This may require the use of components with higher current ratings, which can impact cost and design complexity.<br><br>
+
+              <b>2. Complexity:</b> Step-down choppers involve rapid switching of the components, leading to switching losses. Minimizing these losses requires careful selection of switching devices and optimization of control strategies.<br><br>
+
+              <b>3. Electromagnetic Interference (EMI):</b> The fast switching action of step-down choppers can lead to electromagnetic interference (EMI) generation, which may require additional filtering and shielding measures to comply with electromagnetic compatibility (EMC) standards.
+              
+            </p>       
+          <h3 align="left" style="margin-top:1.5%"><b> Applications of Step-down Chopper </b> </h3>
+            <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+              <b>1. DC Motor Speed Control:</b> Step-down choppers are commonly used in DC motor speed control applications. By reducing the voltage supplied to the motor, the chopper can control the motor's speed and torque output.<br><br>
+
+              <b>2. Battery Charging:</b> Step-down choppers are utilized in battery charging circuits, especially for charging lithium-ion and lead-acid batteries. They regulate the charging voltage to match the battery's requirements.<br><br>
+              
+              <b>3. DC-DC Buck Converters:</b> Step-down choppers serve as the foundation for DC-DC buck converters, which are widely used in power supply circuits to provide lower output voltages for electronic devices and systems.<br><br>
+              
+              <b>4. Voltage Regulation in Power Supplies:</b> Step-down choppers, also known as buck converters, are widely used in power supply circuits to regulate the output voltage. They efficiently reduce a higher input voltage (from the mains or a DC source) to a lower, stable voltage suitable for powering electronic devices such as microcontrollers, integrated circuits, and sensors.<br><br>
+                  
+            </p>
+    
+
+
+      </section>
+      <!-- /.content -->
+    </div>
+    <footer class="main-footer">
+      <h4 align="center">Lab contributed by <!-- Institute Name --> </h4>
+    </footer>
+  </div>
+
+</body>
+
+</html>
+<script>
+  function theory() {
+    document.getElementById("theory").style.backgroundColor = "#009dff";
+
+  }
+
+
+</script>
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

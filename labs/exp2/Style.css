@@ -1,0 +1,743 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+.} */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0c0c0c;
+    color: #ffffff;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #844208;
+    color: white;
+    padding: 1%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.header .title {
+    flex-grow: 1;
+    text-align: center;
+    padding: 0%;
+    font-size: 23px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header .title-text {
+    /* background-color:#b5b5ec;; */
+    padding: 0.1%;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+.header .instructions {
+    background-color: white;
+    border: none;
+    color: rgb(119, 108, 108);
+    padding: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    
+}
+
+.header .instructions:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.header .instructions:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.header .instructions:disabled {
+    background-color: #e0e0e0;
+    color: #a0a0a0;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+.divider {
+    border: none;
+    height: 5px;
+    background-color: #c3dffd;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    height: calc(100vh - 100px);
+}
+
+.content-inner{
+    width: 20%;
+}
+
+.sidebar {
+    /* height: 70%; */
+    width: 100%;
+    background-color: #f7d7a3e6;
+    overflow-y: auto;
+    padding: 10px;
+    color: white;
+}
+
+.sidebar .section {
+    margin-bottom: 20px;
+}
+
+.sidebar h3 {                                          /* components bar headings */
+    text-align: center;
+    color: #000000;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #0b0b0b;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+.sidebar h2 {
+    text-align: center;                                       
+    color: #000000;
+    /*font-size: 18px; */
+    text-transform: uppercase;
+    border-bottom: 2px solid #000000;
+    margin-top: 2%;
+    padding-bottom: 1%;
+    margin-bottom: 1%;
+}
+
+.components {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none; /* Remove black dots */
+    padding: 0;
+    margin: 0;
+}
+
+.component-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.component-container {
+    width: 30%;
+    /* height: 100%; */
+    text-align: center;
+}
+#comp4{
+    width: 90%;
+    text-align: center;
+}
+#comp8,#comp9{
+    width: 80%;
+    text-align: center;
+}
+
+.component {
+    width: 70%;
+    height: 80%;
+    /* max-width: 80px; */
+    margin: 5px 2px;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+#component4{
+    width: 60%;
+    height: 60%;
+    /* max-width: 80px; */
+    margin: 5px 2px;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.component-label {                             /* Comopnent name text */ 
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    text-shadow: black;
+}
+
+.main-content {
+    /* width: 75%; */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.circuit-section {
+    background-image: url("images/Wood-background.jpg");
+
+    width: 48%;
+    height: 95%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    border: 2% solid #0e0e0e;
+    padding: 0.5%;
+    position: relative;
+    margin: 0.5% 0.5%;
+    /* height: calc(100% - 20px); */
+    background-color: #edd6ae;
+    box-shadow: 0 4px 8px rgba(245, 241, 238, 0.1);
+    border-radius: 5px;
+}
+
+.circuit-window {
+    background-image: url("images/wood.jpg");
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    border: 3px solid #030303;
+    margin-top: 1%;
+    position: relative;
+    background-color:#ffffff;
+}
+
+.button-group {
+    display: flex;
+    /* justify-content: space-between; */
+    position: relative;
+    width: 100%;
+    padding: 1%;
+}
+
+.footer {
+    background-color:#000000;
+    color: white;
+    text-align: center;
+    padding: 0.5%;
+    box-shadow: 0 -4px 8px rgba(239, 237, 234, 0.1);
+}
+
+/* .slider-container {
+    position: relative;
+    width:100%; 
+    height: 100%; 
+   
+    background-color: #0a0a09;
+    border-radius: 12.5px;
+    overflow: hidden;
+}
+
+.slider-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #f1efeb; 
+    border-radius: 12.5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.slider-knob {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.left-text, .right-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 100%; 
+    color: white;
+    pointer-events: none;
+}
+
+.left-text {
+    left: 10%; 
+}
+
+.right-text {
+    right: 10%; 
+}
+
+.slider-input {
+    display: none;
+}
+
+.slider-input:checked + .slider-track {
+    background-color: #de0e23; 
+    transform: translateX(100%);
+}
+
+.slider-input:checked + .slider-track + .slider-knob {
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.slider-input:checked + .slider-track + .slider-knob + .left-text {
+    color: rgb(230, 230, 223);
+}
+
+.slider-input:checked + .slider-track + .slider-knob + .right-text {
+    color: rgb(250, 250, 242);
+}
+
+.slider-input:not(:checked) + .slider-track {
+    background-color: #de0e23; 
+}
+
+.slider-input:not(:checked) + .slider-track + .slider-knob + .left-text {
+    color: rgb(252, 252, 245);
+}
+
+.slider-input:not(:checked) + .slider-track + .slider-knob + .right-text {
+    color: rgb(252, 253, 245);
+}
+
+ */
+
+
+
+body{
+ /* background-image: url("images/Wood-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; */
+    background-color: rgb(250, 247, 255) ;
+    
+}
+
+main{
+    background-color: blueviolet; height: 700px; width: 1470px; padding: 1%;
+}
+.alert{
+    font-size: 60%;
+    position: absolute;
+    top:-100%;
+    height: 15%;
+    margin-left: 33%;
+    width: 20%;
+    border: 10px solid #dbdfdb;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    color:  #ffffff;
+    background-color: rgb(16, 14, 19);
+    border-radius: 10%;
+}
+/* #alert_text{
+    font-size: 150%;
+} */
+/* :hover.alert{
+    border: 10px solid #ffffff;
+} */
+#close{
+    height: 35%;
+    width: 14%;
+    margin-right: 2%;
+    font-size: 100%;
+    padding: 0%;
+    color: rgb(255, 255, 255);
+    background-color:  #ffffff;
+    border: none;
+}
+:hover#close{
+    border: 4px solid #f8a229;
+    color:  #f3a617;
+    background-color: white;
+}
+
+.instruction{
+    position: absolute;
+    height: 70%;
+    width: 93%;
+    background-color:  rgb(255, 255, 255);
+    border: 5px solid rgb(9, 9, 10);
+    padding:2%  2%;
+    top: -100%;
+    z-index: 1;
+    left: 1%;
+    color: rgb(0, 0, 0);
+    transition: 1s;
+    display: flex;
+    justify-content: space-between;
+    font-size: medium;
+}
+
+.instruction button{                  /* INSTRUCTIONS POPUP CROSS STYLING */
+    height: 100%;
+    cursor: pointer;
+    width: 100%;
+    margin-right: 2%;
+    font-size: 50px;
+    color:  #ed1f03;
+    border:none;
+    margin-left: auto;
+    border-radius: 35%;
+
+}
+
+
+.instruction button:hover{
+    box-shadow: 5px 5px 50px 5px #ff0000;
+}
+.instruction button:active{
+    background-color: rgb(4, 4, 3);
+}
+
+
+
+.controlBut{                                /* VERIFY & RESET BUTTON STYLING */
+    border: white;font-size: 100% ;height: 100%; width:30%;  color: white;
+    border-radius: 5%;
+    background-color: #f1a900;
+    padding: 0.5%;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #f5885a;
+    /* background-image: linear-gradient(to bottom, #007bff, #0056b3); */
+    margin: 0 10%;
+    color: black;
+}
+.headBut{                                           /* power circuit, control circuit button*/
+    height: 6%; width: 96%; margin: 1%; color: rgb(11, 11, 11); font-size: 140%;
+    font-weight: 900;
+    background-image: linear-gradient(to bottom, #ca673d, #f8ab5e);
+    text-align: center;
+    /* cursor: not-allowed; */
+    padding: 0.5%;
+}
+#pc{
+    opacity: 0.5;
+}
+#cc{
+    cursor: pointer;
+}
+#cc:hover{
+   
+    box-shadow: 5px 5px 20px 5px #000000;
+    background-color: #eca10c;
+}
+/* #pc:hover{
+    box-shadow: 5px 5px 20px 5px #000000;
+    background-color: #4288DA;
+}
+#cc:active{
+    background-color: rgb(0, 0, 0);
+    color: whitesmoke;
+} */
+/* #pc:active{
+    background-color: rgb(93, 19, 190);
+} */
+
+.controlBut:hover{
+    background-color: rgb(242, 129, 64);
+    box-shadow: 5px 5px 8px 5px #f1f0ea;
+}
+.controlBut:active{
+    background-color: rgb(240, 148, 27);
+    background-image: linear-gradient(to bottom, #e6b410, #edb007);
+}
+
+
+.bar{                                    /* INSRUCTION BUTTON STYLING */
+   /* cursor: pointer;
+    
+    height: 100%;
+    width: 100%;
+    background-color: rgb(13, 31, 225);
+    
+    margin-left: 0%;
+    border-right: 5px solid rgb(5, 5, 5);
+    color: rgb(234, 204, 38);
+    text-align: center;
+   
+    padding-top: 0.5%;
+    font-size: 150%;
+    */
+
+   
+    cursor: pointer;
+    width: 98%;
+    /* height: 5%; */
+   
+    background-color:  rgb(231, 168, 104);
+   
+    margin: 1% ;
+    border-right: 1px solid rgb(0, 1, 8);
+    color: rgb(0, 0, 0);
+    text-align: center;
+   
+    padding-top: 0.5%;
+    font-size: 150%;
+    border-radius: 2%;
+    font-weight: 700;
+
+    
+}
+.bar:hover{
+    box-shadow: 1px 1px 6px 7px #fcfbf9;
+    background-color:   rgb(224, 114, 4);
+    color: rgb(6, 6, 6);
+}
+
+.bar:active{
+    background-color: rgb(233, 237, 9);
+    color: whitesmoke;
+}
+.bar-reset{                             /* COMPLETE RESET BUTTON */
+  
+    height: 50%;
+    cursor: pointer;
+    width: 98%;
+   
+    background-color: rgb(198, 55, 55);
+   
+    margin: 1% 0;
+    border-right:1px solid rgb(1, 0, 8);
+    color: rgb(255, 255, 255);
+    text-align: center;
+   
+    padding-top: 0.5%;
+    font-size: 150%;
+    border-radius: 2%;
+    font-weight: 600;
+ 
+    
+   
+   
+    /*
+    border: white;font-size: 100% ;height: 100%; width:30%;  color: white;
+    border-radius: 5%;
+    background-color: #13375e;
+    padding: 2%;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #0056b3;
+    
+    margin: 0 5%;
+    */
+}
+.bar-print{                              /* COMPLETE PRINT BUTTON */
+   /*
+    height: 50%;
+    cursor: pointer;
+    width: 100%;
+    background-color: rgb(13, 31, 225);
+       
+    margin: 1% 0;
+    border-right: 5px solid rgb(8, 0, 8);
+    color: rgb(234, 204, 38);
+    text-align: center;
+    
+    padding-top: 0.5%;
+    font-size: 150%;
+    */
+
+    height: 50%;
+    cursor: pointer;
+    width: 98%;
+   
+    background-color:  rgb(0, 51, 255);
+   
+    margin: 1% 0;
+    border-right: 1px solid rgb(1, 0, 8);
+    color: rgb(255, 255, 255);
+    text-align: center;
+   
+    padding-top: 0.5%;
+    font-size: 150%;
+    border-radius: 2%;
+    font-weight: 700;
+
+    
+}
+.bar-reset:hover{
+    box-shadow: 1px 1px 6px 7px #ff0000;
+    background-color:    rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+}
+.bar-reset:active{
+    background-color: rgb(248, 205, 13);
+    color: whitesmoke;
+}
+.bar-print:hover{
+    box-shadow: 5px 5px 20px 15px #0011ff;
+    background-color:  rgb(255, 255, 255);
+    color: rgb(4, 0, 255);
+}
+.bar-print:active{
+    background-color:  rgb(243, 243, 15);
+    color: whitesmoke;
+}
+
+
+.inner{
+    background-color: #000000;margin-top: 1%; height: 85%; width: 98%; text-align: center; font-size: 130%;padding: 1%;display: flex;
+}
+
+
+@media print {
+    .jsplumb-connector, .jsplumb-endpoint {
+        position: absolute !important;
+    }
+    /* Add other print-specific styles here */
+  }
+
+
+
+  .fan {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease; /* Smooth transition for rotation */
+  }
+  
+  /* Rotate the fan when the rotate class is applied */
+  .fan.rotate {
+    transform: rotate(360deg);
+  }
+
+  #controlReset{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    padding: 0;
+    height: 80%;
+  }
+
+.rotate {
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Adjust the size as needed */
+    transition: transform 0.5s linear;
+}
+
+.rotating {
+    animation: spin infinite 0.2s linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* width */
+#chg::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  #chg::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  #chg::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  #chg::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+
+  .toggle-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    padding: 1%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-slider input[type="radio"] {
+    display: none;
+}
+
+.toggle-slider label {
+    flex: 1;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.toggle-slider input[type="radio"]:checked + label {
+    color: #ffffff;
+}
+
+.slider {
+    position: absolute;
+    /* top: 5px;
+    left: 5px; */
+    width: 51%;
+    height: 98%;
+    /* padding: 1%; */
+    background-color: #00f;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    z-index: 0;
+}
+
+#ac-load:checked ~ .slider,
+#dc-load:checked ~ .slider {
+    
+    background-color: rgb(255, 0, 0);
+}
+
+#dc-load:checked ~ .slider {
+    left: 48%;
+}
+
+
+
+
+
+  #comp4,#comp11{
+    width: 90%;
+    text-align: center;
+  
+  }
+  
+  #component11{
+    width: 60%;
+    height: 60%;
+    /* max-width: 80px; */
+    margin: 5px 2px;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+  }

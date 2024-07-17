@@ -1,0 +1,378 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Virtual Labs | Power Electronics Lab  </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+    <script>
+        window.onload = function () {
+            document.getElementById("pretest").className = "active treeview";
+        }
+    </script>
+    <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
+    <style>
+        #toggle_nav:hover {
+            background-color: #1261A0;
+        }
+
+        #aim {
+            background-color: #009dff;
+        }
+
+        #aim:hover,
+        #theory:hover,
+        #pretest:hover,
+        #procedure:hover,
+        #simulation:hover,
+        #result:hover,
+        #posttest:hover,
+        #references:hover {
+            background-color: #009dff;
+        }
+    </style>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <!--Navigation Bar-->
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://iitr.ac.in"><span><img src="images/iitrLogo.png"
+                            style="margin-top:-15px;height:50px;width: 400px;"></span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../../index.html" class="logo"
+                style="background-color:#009dff; border-right:solid;border-right-color: #1261A0;">
+                <p align="center" style="font-size:16PX;"><b>Power Electronics Lab
+                        <!-- Write your lab name -->
+                    </b></p>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top" style="background-color:#009dff;">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" id="toggle_nav">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <section class="content-header">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="../index.html"><i class="fa fa-dashboard"></i>Power Electronics Lab</a>
+                        </li>
+                        <li>
+                            <a href="#">Step-down Chopper with R Load</a>
+                            
+                            </a>
+                        </li>
+                        <li class="active">Pre Test</li>
+                    </ol>
+                </section>
+            </nav>
+        </header>
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar" style="background-color:#1261A0;">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group"></div>
+                </form>
+                <!-- /.sear ch form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu" style="background-color:#1261A0;">
+                    <li class="treeview" id="aim">
+                        <a href="index.html" id="aim">
+                            <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Aim</span>
+
+                        </a>
+                    </li>
+                    <li class="treeview" id="theory">
+                        <a href="theory.html" id="theory">
+                            <i class="fa fa-files-o" style="color:white;"></i>
+                            <span style="color:white;">Theory</span>
+                        </a>
+                    </li>
+                    <!--   <li class="treeview" id="numerical">
+                    <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="program">
+                    <a href="program.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Program</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li> -->
+                    <li class="treeview" id="pretest">
+                        <a href="pretest.html" id="pretest">
+                            <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Pre
+                                Test</span>
+
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="procedure">
+                        <a href="procedure.html" id="procedure">
+                            <i class="fa fa-files-o" style="color:white;"></i> <span
+                                style="color:white;">Procedure</span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="simulation">
+                        <a href="simulation.html" id="simulation">
+                            <i class="fa fa-laptop" style="color:white;"></i>
+                            <span style="color:white;">Simulation</span>
+                            <span class="pull-right-container">
+                            </span>
+                        </a>
+                    </li>
+
+
+
+                    <li class="treeview" id="posttest">
+                        <a href=" posttest.html" id="posttest">
+                            <i class=" fa fa-files-o" style="color:white;">
+                            </i>
+                            <span style="color:white;">Post Test</span>
+                            <span class="pull-right-container">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="ref">
+                        <a href="references.html" id="references">
+                            <i class="fa fa-files-o" style="color:white;"></i>
+                            <span style="color:white;">References</span>
+                            <span class="pull-right-container">
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+
+        <div class="content-wrapper" style="padding-bottom: 100px;">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1 align="center">
+                    Step-down Chopper with R Load
+                    <!-- Write experiment name here -->
+                </h1>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+                <h3 style="margin-top:5%"> Pre Test </h3>
+                <p style="font-size:130%; margin-top:2%">
+                    <br><br><br>
+                    <!--Theory of experiment -->
+                </p>
+            </section>
+            <!-- /.content -->
+            <div style="margin-left: 20px; margin-top: -100px; font-size: 18px;">
+                <form name="quiz" style="font-family: Arial, Helvetica, sans-serif ;">
+                    <div id="question1">
+                        <p> Q1. What is the primary function of a step-down chopper?</p>
+      <p> <input type="radio" name="question1" value="A"> a. To increase the output voltage</p>
+      <p> <input type="radio" name="question1" value="B"> b. To regulate the input voltage</p>
+      <p> <input type="radio" name="question1" value="C"> c. To reduce the output voltage</p>
+      <p> <input type="radio" name="question1" value="D"> d. To convert AC to DC voltage</p>
+      <p id="demo1" style="color:red"> </p>
+    </div>
+    <div id=question2>
+      <p> Q2. Step-down choppers are commonly known as?</p>
+      
+      <p> <input type="radio" name="question2" value="A"> a. Inverting converters</p>
+      <p> <input type="radio" name="question2" value="B"> b. Boost converters </p>
+      <p> <input type="radio" name="question2" value="C"> c. Buck converters</p>
+      <p> <input type="radio" name="question2" value="D"> d. Flyback converters</p>
+      <p id="demo2" style="color:red"> </p>
+    </div>
+    <div id="question3">
+      <p> Q3.  What is the duty cycle of a chopper ?</p>
+      <p> <input type="radio" name="question3" value="A"> a. `T_(on)/T_(off)` </p>
+      <p> <input type="radio" name="question3" value="B"> b. `T_(on)/T`</p>
+      <p> <input type="radio" name="question3" value="C"> c. `T/T_(on)`</p>
+      <p> <input type="radio" name="question3" value="D"> d. `T_(off) * T_(on)`</p>
+      <p id="demo3" style="color:red"> </p>
+    </div>
+    <div id="question4">
+      <p> Q4.  Step-down choppers are commonly used for-</p>
+      <p> <input type="radio" name="question4" value="A"> a. DC motor speed control</p>
+      <p> <input type="radio" name="question4" value="B"> b. Solar panel voltage regulation</p>
+      <p> <input type="radio" name="question4" value="C"> c. LED dimming</p>
+      <p> <input type="radio" name="question4" value="D"> d. All of the above</p>
+      <p id="demo4" style="color:red"> </p>
+    </div>
+    <div id="question5">
+      <p> Q5. What type of losses is typically associated with the rapid switching action of the step-down chopper's components?<br>
+        </p>
+      <p> <input type="radio" name="question5" value="A"> a. Conduction losses </p>
+      <p> <input type="radio" name="question5" value="B"> b. Switching losses </p>
+      <p> <input type="radio" name="question5" value="C"> c. Core losses </p>
+      <p> <input type="radio" name="question5" value="D"> d. Hysteresis losses</p>
+      <p id="demo5" style="color:red"> </p>
+    </div>
+
+    <!-- End -->
+    
+  </form>
+  <p id="result"></p>
+  <div Style="float:left">
+    <button value="submit" style="width:100px; height: 30px;" id="submit_answers"> Submit </button>
+
+  </div>
+  <div Style="float:left; margin-left: 10px;">
+    <button value="Preview Answer" style="width:100px; height: 30px;" id="preview_answers" disabled="true">
+      Solution </button>
+  </div>
+  <div Style="float:left; margin-left: 10px;">
+    <button value="reset" style="width:100px; height: 30px;" id="reset" onClick="window.location.reload(true)"
+      disabled="true">
+      Reset </button>
+  </div>
+
+  <script>
+    var q1 = document.quiz.question1;
+    var q2 = document.quiz.question2;
+    var q3 = document.quiz.question3;
+    var q4 = document.quiz.question4;
+    var q5 = document.quiz.question5;
+  
+    var submit_answers = document.getElementById("submit_answers")
+    var preview_answers = document.getElementById("preview_answers")
+
+    var a1 = document.getElementById("demo1");
+    var a2 = document.getElementById("demo2");
+    var a3 = document.getElementById("demo3");
+    var a4 = document.getElementById("demo4");
+    var a5 = document.getElementById("demo5");
+ 
+    var show = [a1, a2, a3, a4, a5]
+    var QuestionList = [q1, q2, q3, q4, q5]
+    var AnswerList=[67,268,594,1100,1650]
+
+
+    function getIndex(x) {
+      switch (x) {
+        case 'A':
+          return 0;
+        case 'B':
+          return 1;
+        case 'C':
+          return 2;
+        case 'D':
+          return 3;
+        default:
+          return 4;
+      }
+    }
+    let c=1
+    let x=67/((c+1)*(c+1));
+    function decrypt(x){
+       
+        let text = String.fromCharCode(x);
+        return text;
+      
+    }
+
+    submit_answers.onclick = function score() {
+
+      let c = 0
+      for (let i = 0; i < QuestionList.length; i++) {
+        console.log(i);
+        if (getIndex(QuestionList[i].value) == 4) {
+
+          window.alert("Please attempt all the questions and then click on submit button");
+         
+          exit();
+          event.preventDefault();
+        }
+      }
+
+      for (let i = 0; i < QuestionList.length; i++) {
+        console.log(i);
+        if (QuestionList[i].value == decrypt(AnswerList[i]/((i+1)*(i+1)))) {
+          c++;
+        }
+
+        else {
+          QuestionList[i][getIndex(QuestionList[i].value)].style.accentColor = "red";
+
+        }
+      }
+
+
+      document.getElementById("result").innerHTML = "You scored " + c + " marks from 5";
+
+      preview_answers.disabled = false
+      reset.disabled = false
+    }
+
+    preview_answers.onclick = function preview() {
+
+      for (let i = 0; i < QuestionList.length; i++) {
+
+        show[i].innerHTML = "The correct answer is option " + decrypt(AnswerList[i]/((i+1)*(i+1)));
+        
+      } 
+
+      submit_answers.disabled = true
+
+    }
+  </script>
+            </div>
+        </div>
+        <div>
+            <footer class="main-footer">
+                <h4 align="center">Lab contributed by
+                    <!-- Institute Name -->
+                </h4>
+            </footer>
+        </div>
+
+</body>
+
+</html>
+
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DC and AC Load Operation</title>
+    <link rel="stylesheet" href="Style.css">
+    
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsplumb@2.15.6/dist/js/jsplumb.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" >
+
+</head>
+<body>
+    
+    <div style="width: 1500px; height: 710px;background-color: rgb(236, 10, 10);position: relative;margin: auto; border: 2px solid black;"  id="main-box">
+        <div style="width: 100%; height: 7%;">
+            <header class="header">
+                <div class="title">
+                    <div class="title-text">
+                        <h3 style="margin:0">To operate a DC load incorporating the use of proximity sensor and timer circuit</h3>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div style="width: 100%; height: 89%;background-color: rgb(255, 255, 255);display: flex;">
+            <div style="width: 23%; height: 97.5%;background-color: rgb(255, 255, 255);">
+                <div style="width: 96%; height: 7%;background-color: rgb(255, 255, 255); display: flex;">
+                    <div class="bar"  id="instruct" style="padding-top: 5px;">Instructions</div>
+                </div>
+                <div style="width: 100%; height: 81%;background-color: rgb(59, 152, 82); display: flex;">
+                    <div class="sidebar">
+                        <h2>Components</h2>
+                        <div class="">
+                            <h3>Relay</h3>
+                            <div class="components" id="symbolsSection"  >
+                                <div class="component-wrapper"  >
+                                    <div class="component-container" id="comp1" style="margin-top: 0;margin-bottom: 0;">
+                                        <img src="images/relay img.png" alt="NO Relay" class="component" id="component1" style="width: 60%;height: 60%;margin-top: 0; ">
+                                        <div class="component-label">Relay</div>
+                                    </div>
+                                    <div class="component-container" id="comp2">
+                                        <img src="image/No_R_-removebg-preview (2).png" alt="NO()" class="component" id="component2"  style="width: 60%;height: 60%;margin-top: 0;">
+                                        <div class="component-label" id="component2-nor">No (R)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <hr class="sub-divider" style="margin-top: 0%;" >
+                        <div class="section" id="comp17" style=" justify-content: center;">
+                        <h3>DC Load</h3>
+                            
+                              
+                                        <img src="images/fan-Component.png" alt="Motor" class="component" id="component17" style="width: 40%;height: 40%;margin-top: 0; padding-left: 95px;">
+                                        <div class="component-label" style="text-align: center;" id="component6-b">FAN (DC Motor)</div>
+                                  
+                            
+                      
+                        </div>
+                        <hr class="sub-divider" style="margin-top: 0%;" >
+                        <div class="section">
+                        <h3>Timer</h3>
+                            <div class="components" id="symbolsSection">
+                                <div class="component-wrapper"  >
+                                    <div class="component-container" id="comp12" style="margin-top: 0;margin-bottom: 0;">
+                                        <img src="image/Timer.png" alt="Timer" class="component" id="component12" style="width: 100%;height: 70%;margin-top: 0;">
+                                        <div class="component-label">Timer</div>
+                                    </div>
+                                    <div class="component-container" id="comp13">
+                                        <img src="image/NC_T_C-removebg-preview.png" alt="" class="component" id="component13"  style="width: 80%;height: 70%;margin-top: 0;">
+                                        <div class="component-label" id="component13-not">NC(T)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- <hr class="sub-divider" style="margin-top: 0%;">
+                        <div class="section"  id="hide-btn" >
+                            <h3 class="fan-bulb-header">Motor</h3>
+                            <div class="components" id="supplySection">
+                                <div class="component-wrapper" id="comp17">
+                                    <div class="component-container1"  id="comp17" >
+                                        <img src="image/motor(bg1).png" alt="motor" class="component" id="component17" style="width: 90%;height: 40%;margin-top: -10;">
+                                        <div class="component-label" id="component6-b">DC Motor</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <hr class="sub-divider" style="margin-top: 0%;">
+                        <div class="section">
+                        <h3>PNP Sensor</h3>
+                            <div class="components" id="symbolsSection">
+                                <div class="component-wrapper"  >
+                                    <div class="component-container" id="comp14" style="margin-top: 0;margin-bottom: 0;">
+                                        <img src="image/PNP-ON.jpg" alt="PNP" class="component" id="component14" style="width: 110%;height: 100%;margin-top: 0;">
+                                        <div class="component-label">PNP</div>
+                                    </div>
+                                    <div class="component-container" id="comp15">
+                                        <img src="image/coin.png" alt="COIN" class="component" id="component15"  style="width: 80%;height: 80%;margin-top: 0;">
+                                        <div class="component-label" id="component15-not">Coin</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="sub-divider"  style="margin-top: 0%;" >
+                        <div class="section" id="comp16" style=" justify-content: center;">
+                        <h3>Supply</h3>
+                            
+                              
+                                        <img src="images/Supply f1.png" alt="AC Supply" class="component" id="component16" style="width: 50%;height: 65%;margin-top: 0; padding-left: 80px;">
+                                        <div class="component-label" style="text-align: center;">DC Supply</div>
+                                  
+                            
+                      
+                        </div>
+                        
+                       
+                        <!-- <hr class="sub-divider" style="margin-top: 6%;">
+                        <div class="section" id="hide-switch" >
+                            <h3>Supply</h3>
+                            <div class="components" id="supplySection">
+                                <div class="component-wrapper">
+                                    
+                                    
+                                    <div class="component-container" id="comp16">
+                                        <img src="images/Supply f1.png" alt="AC Switch Off 1" class="component" id="component16"  style="width: 100%;height: 140%;margin-top: 0;">
+                                        <div class="component-label">DC Supply</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div style="width: 97%; height: 10%;background-color: #ffffff;">
+                    <div class="bar-print" onclick="onPrint()" style="padding-top: 5px;" >Print</div>
+                    <div class="bar-reset"  id="Reset" style="padding-top: 5px;">Reset</div>
+                </div>
+
+            </div>
+            <div style="width: 77%; height: 100%;background-color: rgb(255, 255, 255);display: flex;">
+                    <div class="circuit-section control"  id="ControlC">
+                        <div class="headBut" id="cc">
+                            <h2 style="margin-top: 0%;padding-top: 1%; font-size: 100%;">Control circuit</h2>
+                        </div>
+                        <div  class="circuit-window" style="display: flex; position: relative;" id="circuit-window1">
+
+                            <img src="images/supply f23.png" alt="" style="position: absolute;width: 25%; height: 23%;top: 15%;left: 2%;opacity: 0;" id="dc-control">
+                            <button style="width: 5%; height: 5%;position: absolute; left:6.1%; top: 26.9%;border: rgb(77, 30, 30);opacity: 0;background-color: #ff00003e;" id="dc-c-u"></button>
+                            <button style="width: 5%; height: 5%;position: absolute; left: 10%;top: 26.9%;border: white;  opacity: 0;background-color: #0011ff67;" id="dc-c-d"></button>
+                            <img src="images/s1.png" alt="" style="position: absolute;width: 7.3%; height: 9.3%;top: 23.4%;left: 17.2%;opacity: 0;" id="switch-c">
+                            <h6 style="position: absolute;top: 33%;left: 7.8%; color: #000000;font-weight: bolder;font-size: 100%;" id="dc-c-t"></h6>
+
+
+                            <img src="image/No(R).png" alt="" style="position: absolute;width: 10%; height: 16%;top: 5%;left: 35%;opacity: 0;box-shadow: 1px 1px 5px 1px #222120;" id="no-r-c" class="changing-image">
+                            <!-- <button style="width: 5%; height: 5%;position: absolute; left: 37%;top: 3.5%;border: rgb(77, 30, 30);opacity:0.5;background-color: #ff00003e;" id="no-r-u"></button>
+                            <button style="width: 5%; height: 5%;position: absolute; left: 37%;top: 17.5%;border: white;  opacity: 0.5;background-color: #0011ff67;" id="no-r-d"></button> -->
+                            <!-- <div style="position: absolute;width: 18%; height: 26%;top: 36%;left: 57%;opacity: 0;border: 2px solid red;" id="nor-power-3-div"></div> -->
+                            <h6 style="position: absolute;top: 16.5%;left: 36.5%; color: #000000;font-weight: bolder;font-size: 90%;" id="no-r-t"></h6>
+                            <img src="image/No(R).png" alt="" style="position: absolute;width: 10%; height: 16%;top: 5%;left: 35%;opacity: 0;box-shadow: 1px 1px 5px 1px #222120;" id="no-r-c-o" class="changing-image">
+
+
+
+                            <img src="image/timer(edit).jpg" alt="" style="position: absolute;width: 19%; height: 32%;top: 60.2%;left: 57.4%;opacity: 0;box-shadow: 2px 2px 7px 2px #222120;" id="timer">
+                            <button style="width: 5%; height: 5%;position: absolute; left: 57.6%;top: 60.4%;border: rgb(77, 30, 30);opacity: 0;background-color: #ff00003e;" id="timer-u"></button>
+                            <button style="width: 5%; height: 5%;position: absolute; left: 71.3%;top: 87.2%;border: white;  opacity: 0;background-color: #0011ff67;" id="timer-d"></button>
+                            <h6 style="position: absolute;top: 87%;left: 64.5%; color: #000000;font-weight: bolder;font-size: 105%;" id="timer-t"></h6>
+                            <img src="image/timero.png" alt="" style="position: absolute;width: 19%; height: 32%;top: 60.2%;left: 57.4%;opacity: 0;box-shadow: 2px 2px 7px 2px #222120;" id="timero">
+                            
+                            <div class="timer-container" >
+                                <div class="knob" id="knob" style="opacity: 0;"></div>
+                                <input type="text" class="timer-display" id="timer-display" value="0s" style="opacity: 0;">
+                            </div>
+
+                            <img src="image/NC(T)C.jpg" alt="" style="position: absolute;width: 10%; height: 16%;top: 36%;left: 35%;opacity: 0;box-shadow: 1px 1px 5px 1px #222120;" id="nc-t" class="changing-image">
+                            <button style="width: 5%; height: 5%;position: absolute; left: 38.3%;top: 35%;border: rgb(77, 30, 30);opacity: 0;background-color: #ff00003e;" id="nc-t-u"></button>
+                            <button style="width: 5%; height: 5%;position: absolute; left: 38.3%;top: 49.3%;border: white;  opacity: 0;background-color: #0011ff67;" id="nc-t-d"></button>
+                            <h6 style="position: absolute;top: 47%;left: 36.5%; color: #000000;font-weight: bolder;font-size: 100%;" id="nc-t-t"></h6>
+                            <img src="image/NC(T)C.jpg" alt="" style="position: absolute;width: 10%; height: 16%;top: 36%;left: 35%;opacity: 0;box-shadow: 1px 1px 5px 1px #222120;" id="nc-t-o" class="changing-image">
+
+
+
+                            <img src="image/PNP-OFF.jpg" alt="" style="position: absolute;width: 25%; height: 20%;top: 28%;left: 73%;opacity: 0;box-shadow: 1px 1px 5px 1px #222120;" id="pnp">
+                            <button style="width: 5%; height: 5%;position: absolute; left: 74.1%;top: 30.8%;border: rgb(77, 30, 30);opacity: 0;background-color: #ff00003e;" id="pnpu"></button>
+                            <button style="width: 5%; height: 5%;position: absolute; left: 74.1%;top: 36.4%;border: rgb(48, 196, 11);  opacity: 0;background-color: #0011ff67;" id="pnps"></button>
+                            <button style="width: 5%; height: 5%;position: absolute; left: 74.1%;top: 42.2%;border: white;  opacity: 0;background-color: #0011ff67;" id="pnpd"></button>
+                            <h6 style="position: absolute;top: 44%;left: 73.3%; color: #000000;font-weight: bolder;font-size: 100%;" id="pnpt"></h6>
+                            <img src="image/PSP(sensorButton).png" alt="" style="position: absolute;width: 13%; height: 15%;top: 29.5%;left: 84%;opacity: 0;" id="pnp-sensor">
+                           
+
+                            <img src="images/relay img.png" alt="" style="position: absolute;width: 12%; height: 33%;top: 61%;left: 33%;opacity:0 ;" id="relay">
+                            <button style="width: 5%; height: 5%;position: absolute; left: 40.8%;top: 61.4%;border: rgb(77, 30, 30);opacity:0;background-color: #ff00003e;" id="relay-u"></button>
+                            <button style="width: 5%; height: 5%;position: absolute; left: 34.8%;top: 89.4%;border: white;  opacity: 0;background-color: #0011ff67;" id="relay-d"></button>
+                            <button style="width: 2%; height: 4%;position: absolute; left: 41.5%;top: 82%;border: white;background-color: rgb(255, 0, 0);opacity: 0;" id="light"></button>
+                            <h6 style="position: absolute;top: 87%;left: 36.7%; color: #000000;font-weight: bolder;font-size: 100%;" id="relay-t"></h6>
+
+
+                              
+                            <img src="image/coinStand (2).png" alt="" style="position: absolute;width: 25%; height: 20%;top: 2%;left: 77%;opacity: 0;" id="coinStand">
+                            
+                            <img src="image/coin.png" alt="" style="position: absolute;width: 10%; height: 12.5%;top: 6%;left: 84.5%;opacity: 0;" id="coin" class="draggable-image">
+                            <h6 style="position: absolute;top: 16%;left: 77.5%; color: #000000;font-weight: bolder;font-size: 100%;" id="coint"></h6>
+
+                            
+               </div>
+                        <div class="button-group" >
+                            <button class="controlBut" id="controlVerify">Check Connections (1)</button>
+                            <button class="controlBut" id="controlReset">Delete Connections (1)</button>
+                        </div>
+                    </div>
+                    <div class="circuit-section power"  id="PowerC">
+                        <div class="headBut" id="pc">
+                            <h2 style="margin-top: 0%;padding-top: 1%; font-size: 100%;">Power circuit</h2>
+                        </div>
+                        <div  class="circuit-window"  style="display: flex;position: relative;" id="circuit-window2">
+
+                            <img src="image/No(R).png" alt="" style="position: absolute; width: 16%; height: 18%;top: 38%;left: 6%;opacity: 0;box-shadow: 1px 1px 5px 1px #222120;" id="nor-power-1">
+                            <button style="width: 5%; height: 5%;position: absolute; left: 10.95%;top: 36.8%;border: rgb(77, 30, 30);opacity: 0;background-color: #ff00003e;" id="nor-power-1U"></button>
+                            <button style="width: 5%; height: 5%;position: absolute; left: 10.95%;top: 52.95%;border: white;  opacity: 0;background-color: #0011ff67;" id="nor-power-1D"></button>
+                            <h6 style="position: absolute;top:52.8%;left: 8.45%; color: #000000;font-weight: bolder;font-size: 100%;" id="nor-power-1T"></h6>
+
+                            <!-- <div style="position: absolute;width: 18%; height: 26%;top: 36%;left: 57%;opacity: 0;border: 2px solid red;" id="nor-power-3-div"></div> -->
+
+                            <img src="image/No(R).png" alt="" style="position: absolute;  width: 16%; height: 18%;top: 38%;left: 80%;opacity: 0;box-shadow: 1px 1px 5px 1px #222120;" id="nor-power-2">
+                            <button style="width: 5%; height: 5%;position: absolute; left: 84.95%;top: 36.8%;border: rgb(77, 30, 30);opacity: 0;background-color: #ff00003e;" id="nor-power-2U"></button>
+                            <button style="width: 5%; height: 5%;position: absolute; left: 84.95%;top: 52.95%;border: white;  opacity: 0;background-color: #0011ff67;" id="nor-power-2D"></button>
+                            <h6 style="position: absolute;top: 52.5%;left: 82.25%; color: #000000;font-weight: bolder;font-size: 100%;" id="nor-power-2T"></h6>
+
+                            <img src="images/supply f23.png" alt="" style="position: absolute;width: 42%; height: 23%;top: 5%;left: 30%;opacity: 0;" id="dc-power">
+                            <button style="width: 5%; height: 5%;position: absolute; left: 38.5%;top: 17%;border: rgb(77, 30, 30);opacity: 0;background-color: #ff00003e;" id="dc-pu"></button>
+                            <button style="width: 5%; height: 5%;position: absolute; left: 44.9%;top: 17%;border: white;  opacity: 0;background-color: #0011ff67;" id="dc-pd"></button>
+                            <img src="images/s1.png" alt="" style="position: absolute;width: 12%; height: 9.8%;top: 13.5%;left: 55.2%;opacity: 0;" id="switch-p">
+                            <h6 style="position: absolute;top: 23.5%;left: 42%; color: #000000;font-weight: bolder;font-size: 100%;" id="dc-pt"></h6>
+
+                            <img src="image/motor(fan).png" alt="" style="position: absolute;width: 22%; height: 19%;top: 71%;left: 41.8%;opacity: 0;" id="motor-fan" class="draggable-image "  >
+
+                            <img src="image/motor(bg1).png" alt="" style="position: absolute;width: 30%; height: 46%;top: 62.65%;left: 37.4%;opacity: 0;" id="motor-bg">
+                            <button style="width: 5%; height: 5%;position: absolute; left: 48%;top: 92.5%;border: rgb(77, 30, 30);opacity: 0;background-color: #ff00003e;" id="mu"></button>
+                            <button style="width: 5%; height: 5%;position: absolute; left: 53%;top: 92.5%;border: white;  opacity: 0;background-color: #0011ff67;" id="md"></button>
+                            <h6 style="position: absolute;top: 89%;left: 41.5%; color: #000000;font-weight: bolder;font-size: 100%;" id="mt"></h6>
+                            <!-- <button style="width: 26%; height: 3.5%;position: absolute; left: 40%;top: 92.7%;border: white;background-color: rgb(124, 120, 120);opacity: 0;" id="base"></button> -->
+
+
+       </div>
+                        <div  class="button-group" >
+                            <button class="controlBut" id="powerVerify">Check Connections (2)</button>
+                            <button class="controlBut" id="powerReset">Delete Connections (2)</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div  style="width: 100%; height: 1%;background-color: rgb(255, 255, 255);">
+            <footer class="footer">
+                © 2024 Virtual Labs, IIT Roorkee
+            </footer>
+        </div>
+
+        <div class="alert">
+            <h1 id="alert_text"></h1>
+            <button id="close">❌</button>
+        </div>
+ <!-- dont change this        -->
+        <!-- <button style="width: 3%; height: 6%;position: absolute; left: 29.8%;  top: 66%;border: white;background-color: #9a2b2b;opacity: 0;" id="dcu"></button>
+        <button style="width: 3%; height: 6%;position: absolute; left: 31%;top: 66%;border: white;background-color: #170202;opacity: 0;" id="dcd"></button> -->
+        <button style="width: 5%; height: 5%;position: absolute; left: 38.9%;top: 19.5%;border: rgb(77, 30, 30);opacity:0;background-color: #ff00003e;" id="no-r-u"></button>
+        <button style="width: 5%; height: 5%;position: absolute; left: 38.9%;top: 29.8%;border: white;  opacity: 0;background-color: #0011ff67;" id="no-r-d"></button>
+                           
+       
+
+            
+
+
+
+
+        <div class="instruction">
+            <div style="width: 50%;overflow-y: scroll;padding: 0 2%;" id="chg" >
+                <h2>Instructions</h2>
+                <p><strong>1. Click on the <span style="color: rgb(15, 107, 112);">Control Circuit </span>button in <span style="color: blue;">Control Circuit Section</span>.</strong></p>
+                <p><strong>2. Get the required components in <span style="color: blue;">Control Circuit Section</span> by clicking on components displayed in <span style="color: blue;">Components Section</span>.
+
+                </strong></p>
+                <p><strong>3. Establish the connections according to the <span style="color: rgb(15, 107, 112);">control circuit</span> diagram provided in <span style="color: red;">Fig. (a)</span>.</strong></p>
+                <p><strong>4. Verify the <span style="color: rgb(15, 107, 112);">control circuit</span> by clicking on the <span style="color: green;">Check Connections 1</span> button.</strong></p>
+                <p><strong>5. If <span style="color: rgb(59, 54, 54);">Wrong Connections</span> then click on <span style="color: rgb(204, 25, 12);">Delete Connections 1</span> button to delete connections and make the right connections .</p>
+                
+                <p><strong>6. Once the <span style="color: rgb(15, 107, 112);">Control Circuit</span> is verified, switch to the <span style="color: blue;">Power Circuit Section</span> , Choose between <span style="color: rgb(117, 14, 228);">AC Load</span> & <span style="color: rgb(117, 14, 228);"> DC Load </span>.</strong></p>
+                <p><strong>7. Get the required components in <span style="color: blue;">Power Circuit Section</span> by clicking on components displayed in <span style="color: blue;">Components Section</span>.</strong></p>
+                <p><strong>8. Make the connections according to the <span style="color: rgb(15, 107, 112);">Power Circuit</span> diagram provided in <span style="color: red;">Fig. (b)</span>.</strong></p>
+                <p><strong>9. Click on the <span style="color: green;">Check Connections 2</span> button to validate the <span style="color: rgb(15, 107, 112);">Power Circuit. </span></strong></p>
+                <p><strong>10. If <span style="color: rgb(59, 54, 54);">Wrong Connections</span> then click on <span style="color: rgb(204, 25, 12);">Delete Connections 2</span> button to delete connections and make the right connections .</p>
+                
+                <p><strong>11. Once the <span style="color: rgb(15, 107, 112);">Power Circuit</span> is verified, switch On the <span style="color: rgb(102, 11, 145);">Power Supplies</span>. </strong></p>
+                <p><strong>12. Now set the <span style="color: rgb(7, 158, 70);">Timer</span> value (between 1-30sec) by rotating the timer knob.</strong></p>
+                <p><strong>13. Then drag the <span style="color: rgb(112, 15, 150);">Coin</span> on the <span style="color: rgb(150, 15, 55);">PNP proximity sensor</span> to start the motor with timer countdown (motor stops when countdown ends) .</strong></p>
+       
+                
+            
+                <p><strong>14. Click on the <span style="color: rgb(0, 0, 255);">Print</span> button to get a print of the webpage.</strong></p>
+                <p><strong>15. Click on the <span style="color: rgb(255, 0, 0);">Reset</span> button to refresh the webpage .</strong></p>
+
+                <hr>
+                <p style="color: #ff0000;"><strong >[🔴 Red Endpoint Denote Positive terminal.]</strong></p>
+                <p style="color: rgb(0, 0, 255);"><strong >[🔵 Blue Endpoint Denote Negative terminal.]</strong></p>
+                 
+                 
+            </div>
+                <div style="width: 50%;display: flex;justify-content: space-between;margin: 0;padding: 6% 6%;">
+                    <img src="image/Instructions.jpg" alt="" style="width: 180%;height: 100%;">
+                </div>
+                <div style="width: 4%;margin-left: auto;position: absolute;left: 94%;top: 5%;background-color: #f32c2c;">
+                    <button id="instruct-close">&times;</button>
+                </div>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.6/jsplumb.min.js"></script>
+<script src="script.js"></script>
+</html>

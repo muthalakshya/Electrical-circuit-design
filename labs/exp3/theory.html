@@ -1,0 +1,664 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Virtual Labs | Electrical Circuit Design</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      name="viewport"
+    />
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.css" />
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css" />
+    <script>
+      window.onload = function () {
+        document.getElementById("theory").className = "active treeview";
+      };
+    </script>
+    <style>
+      #toggle_nav:hover {
+        background-color: #1261a0;
+      }
+
+      #aim {
+        background-color: #009dff;
+      }
+
+      #aim:hover,
+      #theory:hover,
+      #pretest:hover,
+      #procedure:hover,
+      #simulation:hover,
+      #result:hover,
+      #posttest:hover,
+      #references:hover {
+        background-color: #009dff;
+      }
+    </style>
+
+    <!-- Mathjs library -->
+
+    <script
+      async="true"
+      src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"
+    ></script>
+  </head>
+
+  <body class="hold-transition skin-blue sidebar-mini">
+    <!--Navigation Bar-->
+    <div class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#navbar-ex-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://iitr.ac.in"
+            ><span
+              ><img
+                src="images/iitrLogo.png"
+                style="margin-top: -15px; height: 50px; width: 400px;" /></span
+          ></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse"></div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <header class="main-header">
+        <!-- Logo -->
+        <a
+          href="../index.html"
+          class="logo"
+          style="
+            background-color: #009dff;
+            border-right: solid;
+            border-right-color: #1261a0;
+          "
+        >
+          <p align="center" style="font-size: 16px;">
+            <b> Electrical Circuit Design</b>
+          </p>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav
+          class="navbar navbar-static-top"
+          style="background-color: #009dff;"
+        >
+          <!-- Sidebar toggle button-->
+          <a
+            href="#"
+            class="sidebar-toggle"
+            data-toggle="offcanvas"
+            role="button"
+            id="toggle_nav"
+          >
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+          <section class="content-header">
+            <ol class="breadcrumb">
+              <li>
+                <a href="../index.html"
+                  ><i class="fa fa-dashboard"></i> Electrical Circuit Design</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >To operate a DC motor in forward and reverse direction with
+                  the help of two switching relays with interlocking circuit</a
+                >
+              </li>
+              <li class="active">Theory</li>
+            </ol>
+          </section>
+        </nav>
+      </header>
+
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar" style="background-color: #1261a0;">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group"></div>
+          </form>
+          <!-- /.sear ch form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu" style="background-color: #1261a0;">
+            <li class="treeview" id="aim">
+              <a href="index.html" id="aim">
+                <i class="fa fa-files-o" style="color: white;"></i>
+                <span style="color: white;">Aim</span>
+              </a>
+            </li>
+            <li class="treeview" id="theory">
+              <a href="theory.html" id="theory" onclick="theory()">
+                <i class="fa fa-files-o" style="color: white;"></i>
+                <span style="color: white;">Theory</span>
+              </a>
+            </li>
+            <!--   <li class="treeview" id="numerical">
+                    <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="program">
+                    <a href="program.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Program</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li> -->
+            <li class="treeview" id="pretest">
+              <a href="pretest.html" id="pretest">
+                <i class="fa fa-files-o" style="color: white;"></i>
+                <span style="color: white;">Pre Test</span>
+              </a>
+            </li>
+
+            <li class="treeview" id="procedure">
+              <a href="procedure.html" id="procedure">
+                <i class="fa fa-files-o" style="color: white;"></i>
+                <span style="color: white;">Procedure</span>
+              </a>
+            </li>
+            <li class="treeview" id="simulation">
+              <a href="simulation.html" id="simulation">
+                <i class="fa fa-laptop" style="color: white;"></i>
+                <span style="color: white;">Simulation</span>
+                <span class="pull-right-container"> </span>
+              </a>
+            </li>
+
+            <li class="treeview" id="posttest">
+              <a href=" posttest.html" id="posttest">
+                <i class="fa fa-files-o" style="color: white;"> </i>
+                <span style="color: white;">Post Test</span>
+                <span class="pull-right-container"> </span>
+              </a>
+            </li>
+            <li class="treeview" id="ref">
+              <a href="references.html" id="references">
+                <i class="fa fa-files-o" style="color: white;"></i>
+                <span style="color: white;">References</span>
+                <span class="pull-right-container"> </span>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1 align="center">
+            To operate a DC motor in forward and reverse direction with the help
+            of two switching relays with interlocking circuit
+            <!-- Write experiment name here -->
+          </h1>
+        </section>
+        <!-- Main content -->
+        <section class="content">
+          <h3><b>Introduction </b></h3>
+
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 2%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            Operating a DC motor in both forward and reverse directions is
+            essential in various applications such as robotics, conveyors, and
+            automation systems. This experiment demonstrates the control of a DC
+            motor's direction using two switching relays and an interlocking
+            circuit. The interlocking circuit is crucial as it prevents the
+            simultaneous activation of both relays, which could result in a
+            short circuit and damage the motor.<br /><br />
+          </p>
+
+          <h3><b>Direction Control of DC Motor</b></h3>
+
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 2%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            The direction of rotation of a DC motor is controlled by reversing
+            the polarity of the voltage applied to the armature. This reversal
+            can be achieved using relays, which are electrically operated
+            switches. By configuring the relay connections, the direction of
+            current flow through the motor can be changed, thereby reversing its
+            rotation direction.
+          </p>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 2%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            DC motors operate on the principle that when an electric current
+            passes through a coil in a magnetic field, it experiences a force
+            that causes it to rotate. The direction of rotation depends on the
+            direction of the current flow through the motor's armature windings.
+            By reversing the current flow, the direction of the magnetic field
+            interaction changes, thereby reversing the motor's direction of
+            rotation. This capability is particularly useful in applications
+            requiring precise bidirectional control.
+          </p>
+
+          <h3><b>Relays and Interlocking</b></h3>
+          <h4><b>Relay</b></h4>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            An electromagnetic switch used to control a high-power circuit with
+            a low-power signal. A relay consists of a coil, an armature, a
+            spring, and a set of electrical contacts. When the coil is energized
+            by a control signal, it generates a magnetic field that attracts the
+            armature, causing the contacts to either open or close, thereby
+            switching the connected circuit.<br /><br />
+          </p>
+
+          <h4><b>Interlocking</b></h4>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            A safety mechanism ensuring one action prevents another, thereby
+            avoiding unsafe conditions. In this experiment, interlocking
+            prevents both relays from being activated simultaneously, thus
+            avoiding a short circuit or damage to the motor. Interlocking is
+            achieved by wiring the NC (Normally Closed) contacts of each relay
+            in series with the coil of the opposite relay. This setup ensures
+            that when one relay is activated, it opens the NC contacts of the
+            other relay, preventing it from being energized.<br /><br />
+          </p>
+
+          <h3><b>Components Used</b></h3>
+          <h4><b>1. NO (Normally Open) Push Button :</b></h4>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            When pressed, the circuit is completed, allowing current to flow.
+            Used to initiate the motor's operation in either forward or reverse
+            direction.
+          </p>
+          <h4><b>2. NC (Normally Closed) Push Button :</b></h4>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            When pressed, the circuit is opened, interrupting current flow. Used
+            for emergency stop or switching off the motor.
+          </p>
+          <h4><b>3. 4C/O Relay (RXM2LB2JD) :</b></h4>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            A four changeover relay that can control multiple circuits and is
+            activated by a 12V DC control signal. The relay's contacts can be
+            configured to switch between different circuits, making it suitable
+            for reversing the polarity of the motor's power supply.
+          </p>
+          <h4><b>4. DC Motor (12V) :</b></h4>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            The motor to be controlled for forward and reverse operation. A 12V
+            DC motor is commonly used in various applications due to its
+            compatibility with low-voltage power supplies and its ability to
+            provide sufficient torque and speed for many tasks.<br />
+          </p>
+
+          <h3><b>Circuit Operation</b></h3>
+          <h4><b>Control Circuit</b></h4>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            The control circuit involves two push buttons and two relays. Each
+            push button controls one relay. The interlocking mechanism ensures
+            that only one relay can be active at any time.
+            <br />
+          </p>
+
+          <h4><b>- Forward Direction :</b></h4>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            - When the NO push button for forward direction is pressed, it
+            energizes the corresponding relay.
+
+            <br />
+          </p>
+
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            - The relay's contacts close, allowing current to flow through the
+            motor in the forward direction.
+
+            <br />
+          </p>
+
+          <h4><b>- Reverse Direction :</b></h4>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            - When the NO push button for reverse direction is pressed, it
+            energizes the corresponding relay.
+
+            <br />
+          </p>
+
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            - The relay's contacts close, reversing the current flow through the
+            motor, thus changing its direction.
+
+            <br />
+          </p>
+
+          <h4><b>- Interlocking Mechanism :</b></h4>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            - The NC contacts of each relay are connected in series with the
+            coil of the opposite relay.
+
+            <br />
+          </p>
+
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            - This setup prevents both relays from being energized
+            simultaneously, avoiding a short circuit.
+
+            <br />
+          </p>
+
+          <h4><b>Power Circuit</b></h4>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            The power circuit is directly connected to the motor and the relays.
+            It provides the necessary voltage and current to drive the motor in
+            the desired direction.
+            <br />
+          </p>
+
+          <h4><b>- Forward Direction :</b></h4>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            - The relay for the forward direction connects the positive terminal
+            of the power supply to one terminal of the motor and the negative
+            terminal to the other.
+
+            <br />
+          </p>
+
+          <h4><b>- Reverse Direction :</b></h4>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            - The relay for the reverse direction swaps the connections,
+            reversing the current flow through the motor.
+
+            <br />
+          </p>
+
+          <h3><b>Schematic Diagram</b></h3>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            The control circuit's primary function is to determine which relay
+            is activated based on the push button pressed. When the forward push
+            button is pressed, the forward relay is energized, completing the
+            circuit for the motor to run in the forward direction. Conversely,
+            pressing the reverse push button energizes the reverse relay,
+            altering the polarity of the voltage applied to the motor and
+            causing it to run in the reverse direction. The interlocking
+            mechanism is essential for ensuring the safe operation of the motor.
+            By using the NC contacts of each relay in series with the coil of
+            the opposite relay, the circuit ensures that activating one relay
+            automatically disables the other. This prevents both relays from
+            being energized simultaneously, which could create a direct short
+            circuit across the power supply and potentially damage the motor and
+            relays.
+          </p>
+          <br />
+
+          <h4><b>Control Circuit Diagram</b></h4>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            The control circuit diagram shown in Fig.(1) includes the push buttons, relays, and
+            interlocking connections. It shows how the NO and NC contacts are
+            wired to achieve the desired control and safety features.
+          </p>
+
+          <center>
+            <img
+              src="images/control-ckt.png"
+              alt="Contorl Circuit"
+              height="500"
+              style="-webkit-filter: contrast(120%);"
+            />
+          </center>
+
+          <center><b style="font-size: 18px;">Fig.(1) Control Circuit</b></center>
+          <br />
+
+          <h4><b>Power Circuit Diagram</b></h4>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            The power circuit diagram as shown in Fig.(2) illustrates the connections between the
+            power supply, relays, and motor. It demonstrates how the relays
+            switch the polarity of the voltage applied to the motor for forward
+            and reverse operation.
+          </p>
+          <center>
+            <img
+              src="images/power-ckt.png"
+              alt="Power Circuit"
+              height="500"
+              style="-webkit-filter: contrast(120%);"
+            />
+          </center>
+
+          <center><b style="font-size: 18px;">Fig.(2) Power Circuit</b></center>
+          <br />
+
+          <p
+            style="
+              font-size: 130%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            The interlocking mechanism is crucial in preventing simultaneous
+            activation of conflicting relays, thereby protecting the motor and
+            control circuitry. By using two switching relays with interlocking,
+            the DC motor can be safely and effectively operated in both forward
+            and reverse directions. This principle is widely used in industrial
+            applications where precise control of motor direction is required.
+          </p>
+
+          <h3><b>Practical Applications and Importance</b></h3>
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            The ability to control the direction of a DC motor using relays and
+            an interlocking mechanism is essential in various practical
+            applications. In robotics, for example, precise control of motor
+            direction allows for accurate movement and positioning of robotic
+            arms and wheels. In conveyor systems, the ability to reverse motor
+            direction is crucial for tasks such as sorting and redirecting
+            items. Automation systems also benefit from this control, enabling
+            machinery to operate efficiently and safely in both directions. The
+            interlocking mechanism's importance extends beyond preventing short
+            circuits; it also enhances the overall reliability and safety of the
+            system. By ensuring that only one relay is activated at a time, the
+            interlocking mechanism reduces the risk of electrical faults and
+            mechanical failures, thereby improving the longevity and performance
+            of the motor and control components.
+          </p>
+        </section>
+        <!-- /.content -->
+      </div>
+      <footer class="main-footer">
+        <h4 align="center">
+          Lab contributed by : Jodhpur Institute of Engineering & Technology
+          <!-- Institute Name -->
+        </h4>
+      </footer>
+    </div>
+  </body>
+</html>
+<script>
+  function theory() {
+    document.getElementById("theory").style.backgroundColor = "#009dff";
+  }
+</script>
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

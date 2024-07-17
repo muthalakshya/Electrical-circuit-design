@@ -1,0 +1,359 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Virtual Labs | Electrical Circuit Design Lab </title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+  <script>
+    window.onload = function () {
+      document.getElementById("theory").className = "active treeview";
+    }
+  </script>
+  <style>
+    #toggle_nav:hover {
+      background-color: #1261A0;
+    }
+
+    #aim {
+      background-color: #009dff;
+    }
+
+    #aim:hover,
+    #theory:hover,
+    #pretest:hover,
+    #procedure:hover,
+    #simulation:hover,
+    #result:hover,
+    #posttest:hover,
+    #references:hover {
+      background-color: #009dff;
+    }
+  </style>
+
+  <!-- Mathjs library -->
+
+  <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <!--Navigation Bar-->
+  <div class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://iitr.ac.in"><span><img src="images/iitrLogo.png"
+              style="margin-top:-15px;height:50px;width: 400px;"></span></a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <header class="main-header">
+      <!-- Logo -->
+      <a href="../index.html" class="logo"
+        style="background-color:#009dff; border-right:solid;border-right-color: #1261A0;">
+        <p align="center" style="font-size:16px;"><b>Electrical Circuit Design Lab</b></p>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top" style="background-color:#009dff;">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" id="toggle_nav">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <section class="content-header">
+          <ol class="breadcrumb">
+            <li>
+              <a href="../index.html"><i class="fa fa-dashboard"></i>Electrical Circuit Design Lab</a>
+            </li>
+            <li>
+              <a href="#">To operate a DC load incorporating the use of proximity sensor and counter circuit</a>
+            </li>
+            <li class="active">Theory</li>
+          </ol>
+        </section>
+      </nav>
+    </header>
+
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar" style="background-color:#1261A0;">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+          <div class="input-group"></div>
+        </form>
+        <!-- /.sear ch form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" style="background-color:#1261A0;">
+          <li class="treeview" id="aim">
+            <a href="index.html" id="aim">
+              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Aim</span>
+
+            </a>
+          </li>
+          <li class="treeview" id="theory">
+            <a href="theory.html" id="theory" onclick="theory()">
+              <i class="fa fa-files-o" style="color:white;"></i>
+              <span style="color:white;">Theory</span>
+            </a>
+          </li>
+          <!--   <li class="treeview" id="numerical">
+                    <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="program">
+                    <a href="program.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Program</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li> -->
+          <li class="treeview" id="pretest">
+            <a href="pretest.html" id="pretest">
+              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Pre Test</span>
+
+            </a>
+          </li>
+
+          <li class="treeview" id="procedure">
+            <a href="procedure.html" id="procedure">
+              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Procedure</span>
+            </a>
+          </li>
+          <li class="treeview" id="simulation">
+            <a href="simulation.html" id="simulation">
+              <i class="fa fa-laptop" style="color:white;"></i>
+              <span style="color:white;">Simulation</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+
+
+
+          <li class="treeview" id="posttest">
+            <a href=" posttest.html" id="posttest">
+              <i class=" fa fa-files-o" style="color:white;">
+              </i>
+              <span style="color:white;">Post Test</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+          <li class="treeview" id="ref">
+            <a href="references.html" id="references">
+              <i class="fa fa-files-o" style="color:white;"></i>
+              <span style="color:white;">References</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1 align="center">
+          To operate a DC load incorporating the use of proximity sensor and counter circuit <!-- Write experiment name here -->
+        </h1>
+      </section>
+      <!-- Main content -->
+      <section class="content">
+        <h3><b>Introduction </b></h3>
+
+        <p style="font-size:130%; margin-top:2%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          In contemporary electronics and automation, the seamless operation of devices and systems is crucial for enhancing efficiency and productivity. The integration of sensors and control circuits plays a significant role in achieving this goal. Proximity sensors and counter circuits are essential components that facilitate the detection and precise control of various loads in automated systems. This experiment aims to demonstrate the operation of a DC load by incorporating the use of a proximity sensor and a counter circuit, highlighting their practical applications and functionality. <br>
+          <br>
+          Proximity sensors are widely used in numerous applications, ranging from industrial automation and robotics to consumer electronics and automotive systems. These sensors enable non-contact detection of objects, providing a reliable and durable solution for monitoring and control tasks. The ability of proximity sensors to detect objects without physical contact reduces wear and tear, enhances durability, and improves the overall efficiency of the system.<br>
+          <br>
+          Counter circuits, on the other hand, are fundamental components in digital electronics, employed to count the number of occurrences of specific events or pulses. These circuits are integral to various applications, such as frequency measurement, event counting, digital clocks, and timing applications. By counting the input signals and providing a digital output, counter circuits enable precise control and monitoring of processes.<br>
+          <br>
+          The combination of proximity sensors and counter circuits is particularly advantageous in scenarios where it is essential to count the number of objects passing a certain point and subsequently control a load based on this count. For instance, in an automated conveyor system, proximity sensors can detect the passage of items, and the counter circuit can keep track of the number of items processed. Once a predetermined count is reached, the counter can trigger a mechanism to control the conveyor belt or another associated load.<br>
+          
+         
+        
+        </p>
+
+        <h3><b>Basic connection of both PNP and NPN proximity sensor are as shown in figure 1 and 2 respectively.</b></h3>
+        <center><img src="images\NPNtypePsensor.png" alt="NPN type Proximity Sensor" height="300" width="450" style="mix-blend-mode: darken;"></center>
+        <center><b style="font-size:16px;">Fig. 1 NPN Type Proximity Sensor</b></center><br><br>
+
+
+        <center><img src="images\PNPtypePsensor.png" alt="PNP type Proximity Sensor" height="300" width="450" style="mix-blend-mode: darken; -webkit-filter:contrast(120%);"></center><br>
+        <center><b style="font-size:16px;">Fig. 2 PNP Type Proximity Sensor</b></center>
+        
+        <h3><b>Components and Their Functions</b></h3>
+
+        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;"> <b>Proximity Sensors:</b>
+          A proximity sensor detects the presence of an object without physical contact. These sensors emit an electromagnetic field or a beam of electromagnetic radiation (such as infrared) and look for changes in the field or the return signal. When an object enters the proximity sensor's range, it causes a change in the signal, triggering the sensor. This ability to sense objects without direct contact makes proximity sensors highly reliable and suitable for a wide range of applications, especially in environments where contact sensors might wear out quickly or fail.<br>
+
+          There are different kinds of proximity sensors. Some of them are listed below-:<br><br>
+          
+          1. <b>Inductive:</b> This type of sensor detects nearby metallic objects. The sensor creates an electromagnetic field around itself or on a sensing surface. <br><br>
+          
+          2. <b>Capacitive:</b> This type of sensor is used for detection of metallic objects and non-metallic objects.<br><br>
+          
+          3. <b>Photoelectric:</b> This type of sensor is used to detect objects. A light source and receiver are the main components of such sensors.<br><br>
+          
+          4. <b>Magnetic:</b> - This type of sensor uses an electrical switch that is operated based on the presence of permanent magnets in a sensing area.<br><br>
+          
+        </p>
+
+        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;"> <b>Counter Circuits:</b>
+          Counter circuits are integral components in digital electronics, designed to count the number of occurrences of an input signal. They are used in a wide range of applications, from simple event counting to complex digital systems. Counter circuits are essential for tasks involving counting, timing, frequency measurement, and digital data processing.<br> Counters can be classified into various types based on their counting mechanism and the nature of their operation:<br><br>
+
+          1. <b>Up Counters:</b><br>
+
+              Description: Count upwards from zero to a maximum value (e.g., binary, decimal).<br>
+              Operation: Each incoming pulse increments the count by one.<br>
+              Applications: Used in applications where events need to be counted sequentially, such as step counters and production line monitoring.<br><br>
+
+          2. <b>Down Counters:</b><br>
+              Description: Count downwards from a predefined maximum value to zero.<br>
+              Operation: Each incoming pulse decrements the count by one.<br>
+              Applications: Useful in countdown timers, reverse order processing, and decrementing stock quantities.<br><br>
+
+          3. <b>Up/Down Counters:</b><br>
+              Description: Can count in both ascending and descending order, controlled by an additional input signal.<br>
+              Operation: Depending on the control input, the counter either increments or decrements with each pulse.<br>
+              Applications: Used in bidirectional counting applications like elevator control systems and bidirectional motor control.<br><br>
+
+          4. <b>Binary Counters:</b><br>
+              Description: Represent the count in binary format.<br>
+              Operation: Each flip-flop in the counter represents a binary digit (bit), and the count increases in binary sequence.<br>
+              Applications: Found in digital clocks, frequency dividers, and digital odometers.<br><br>
+
+          5. <b>Decade Counters:</b><br>
+              Description: Count from 0 to 9 in decimal format and then reset to 0.<br>
+              Operation: Each pulse increments the count by one until it reaches 9, after which it resets to zero.<br>
+              Applications: Commonly used in digital clocks, frequency counters, and multiplexed displays.<br><br>
+        </p>
+
+
+        <h3><b>Working Principle</b></h3>
+       
+        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          1.	<b>Proximity Detection:</b> The proximity sensor continuously monitors for the presence of an object within its detection range. When an object is detected, the sensor outputs a signal, usually a voltage change.<br><br>
+          2.	<b>Signal Processing:</b> The output signal from the proximity sensor is fed into the counter circuit. Each time the sensor detects an object, it sends a pulse to the counter circuit, incrementing the count.<br><br>
+          3.	<b>Count-based Control:</b> The counter circuit keeps track of the number of pulses received. Once the count reaches a predefined threshold, the counter circuit outputs a signal to control the DC load.<br><br>
+          4.	<b>Activation of DC Load:</b> The output signal from the counter circuit can be used to activate or deactivate the DC load through a relay or a transistor switch. This operation can be configured to occur after a specific number of detections.<br><br>
+<br>
+          
+        </p>
+        <h3><b>Circuit Design and Implementation</b></h3>
+
+
+
+        <center><img src="images\control ckt.jpg" alt="Control Circuit" height="400"
+          width="500" style="mix-blend-mode: darken;"></center>
+      
+      <center><b style="font-size:16px;">Fig. 3 Control Circuit</b></center><br>
+
+      <center><img src="images\power ckt.jpg" alt="Power Circuit" height="400" width="550" style="mix-blend-mode: darken; -webkit-filter:contrast(120%);"></center>
+      <center><b style="font-size:16px;">Fig. 4 Power Circuit</b></center><br>
+
+        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          1.	<b>Proximity Sensor Interface:</b> Connect the proximity sensor to the input of the counter circuit. Ensure proper power supply and grounding for stable operation.<br><br>
+          2.	<b>Counter Configuration:</b> Configure the counter circuit to count the pulses from the proximity sensor. This can be done using a digital counter IC or a microcontroller programmed to count sensor pulses.<br><br>
+          3.	<b>Control Mechanism:</b> Use a relay or transistor as a switch to control the DC load based on the output from the counter circuit. The counter circuit should be configured to send an activation signal when the desired count is reached.<br><br>
+          4.	<b>Power Supply:</b> Ensure an adequate and stable DC power supply for both the sensor and the counter circuit.<br><br>
+
+
+        
+
+
+        <h3><b>Advantages of proximity sensor and counter</b></h3>
+
+  
+
+        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          1.	<b>Precision Control:</b> Allows for precise control of operations based on specific counts, improving accuracy and efficiency.<br><br>
+          2.	<b>Automation:</b> Reduces the need for manual intervention, increasing operational efficiency and reliability.<br><br>
+          3.	<b>Scalability:</b> Counter circuits can be easily scaled to handle different counting needs by adjusting the threshold count.<br><br>
+
+
+        </p>
+        
+
+        <h3><b>Applications of proximity sensor and counter</b></h3>
+        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+
+          1. <b>Manufacturing and Production Lines: </b> control machinery after a certain number of items have passed a point, such as in packaging or sorting processes.<br><br>
+
+          2. <b>Access Control Systems:</b> Count the number of people entering or leaving an area and activate alarms or locks based on the count.<br><br>
+
+          3. <b>Inventory Management:</b> Track the number of items being removed from or added to storage and trigger restocking or recording processes.<br><br>
+
+          
+
+         
+          
+        <h3><b>Conclusion</b></h3>
+        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+
+          Using a proximity sensor and a counter circuit to operate a DC load provides a robust solution for automation systems that require precise event counting before triggering actions. 
+          Counter circuits, in conjunction with proximity sensors, offer a powerful tool for automating and controlling DC loads.
+          The use of proximity sensors and counter circuits to control DC loads offers significant advantages, including high reliability, precision, flexibility, and cost-effectiveness. 
+          This setup is particularly useful in industrial automation, security systems, and inventory management, where actions need to be based on the occurrence of a specific number of events. Understanding the integration and functioning of these components is essential for designing effective automated control systems.<br></p>
+        <!--Theory of experiment -->
+
+      </section>
+      <!-- /.content -->
+    </div>
+    <footer class="main-footer">
+      <h4 align="center">Lab contributed by Jodhpur Institute of Engineering & Technology<!-- Institute Name --> </h4>
+    </footer>
+  </div>
+
+</body>
+
+</html>
+<script>
+  function theory() {
+    document.getElementById("theory").style.backgroundColor = "#009dff";
+
+  }
+
+
+</script>
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

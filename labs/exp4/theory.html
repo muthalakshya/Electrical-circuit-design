@@ -1,0 +1,325 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Virtual Labs | Electrical Circuit Design Lab </title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+  <script>
+    window.onload = function () {
+      document.getElementById("theory").className = "active treeview";
+    }
+  </script>
+  <style>
+    #toggle_nav:hover {
+      background-color: #1261A0;
+    }
+
+    #aim {
+      background-color: #009dff;
+    }
+
+    #aim:hover,
+    #theory:hover,
+    #pretest:hover,
+    #procedure:hover,
+    #simulation:hover,
+    #result:hover,
+    #posttest:hover,
+    #references:hover {
+      background-color: #009dff;
+    }
+  </style>
+
+  <!-- Mathjs library -->
+
+  <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <!--Navigation Bar-->
+  <div class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://iitr.ac.in"><span><img src="images/iitrLogo.png"
+              style="margin-top:-15px;height:50px;width: 400px;"></span></a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <header class="main-header">
+      <!-- Logo -->
+      <a href="../index.html" class="logo"
+        style="background-color:#009dff; border-right:solid;border-right-color: #1261A0;">
+        <p align="center" style="font-size:16px;"><b>Electrical Circuit Design Lab</b></p>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top" style="background-color:#009dff;">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" id="toggle_nav">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <section class="content-header">
+          <ol class="breadcrumb">
+            <li>
+              <a href="../index.html"><i class="fa fa-dashboard"></i>Electrical Circuit Design Lab</a>
+            </li>
+            <li>
+              <a href="#">To operate a DC load incorporating the use of proximity sensor and timer</a>
+            </li>
+            <li class="active">Theory</li>
+          </ol>
+        </section>
+      </nav>
+    </header>
+
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar" style="background-color:#1261A0;">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+          <div class="input-group"></div>
+        </form>
+        <!-- /.sear ch form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" style="background-color:#1261A0;">
+          <li class="treeview" id="aim">
+            <a href="index.html" id="aim">
+              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Aim</span>
+
+            </a>
+          </li>
+          <li class="treeview" id="theory">
+            <a href="theory.html" id="theory" onclick="theory()">
+              <i class="fa fa-files-o" style="color:white;"></i>
+              <span style="color:white;">Theory</span>
+            </a>
+          </li>
+          <!--   <li class="treeview" id="numerical">
+                    <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="program">
+                    <a href="program.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Program</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li> -->
+          <li class="treeview" id="pretest">
+            <a href="pretest.html" id="pretest">
+              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Pre Test</span>
+
+            </a>
+          </li>
+
+          <li class="treeview" id="procedure">
+            <a href="procedure.html" id="procedure">
+              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Procedure</span>
+            </a>
+          </li>
+          <li class="treeview" id="simulation">
+            <a href="simulation.html" id="simulation">
+              <i class="fa fa-laptop" style="color:white;"></i>
+              <span style="color:white;">Simulation</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+
+
+
+          <li class="treeview" id="posttest">
+            <a href=" posttest.html" id="posttest">
+              <i class=" fa fa-files-o" style="color:white;">
+              </i>
+              <span style="color:white;">Post Test</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+          <li class="treeview" id="ref">
+            <a href="references.html" id="references">
+              <i class="fa fa-files-o" style="color:white;"></i>
+              <span style="color:white;">References</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1 align="center">
+          To operate a DC load incorporating the use of proximity sensor and timer
+ <!-- Write experiment name here -->
+        </h1>
+      </section>
+      <!-- Main content -->
+      <section class="content">
+        <h3><b>Introduction </b></h3>
+
+        <p style="font-size:130%; margin-top:2%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          The experiment involves controlling a DC load using a proximity sensor and a timer. It demonstrates the integration of sensing and timing functionalities to control a DC load, such as a motor or light, based on the presence of an object detected by a proximity sensor. In this experiment an inductive type proximity sensor is used to detect metallic objects and the timer circuit is used to stop the DC load.<br>
+          Proximity sensor: A proximity sensor is a device that can detect or sense the approach or presence of nearby objects without being in physical contact with the object. The proximity sensor generates a signal when it detects an object within its sensing range. This signal can be digital (High/Low) or analog (Continuous). For this experiment, a digital inductive type proximity sensor is used.<br>
+          There are different kinds of proximity sensors. Some of them are listed below-:<br><br>
+          
+          1. <b>Inductive:</b> This type of sensor detects nearby metallic objects. The sensor creates an electromagnetic field around itself or on a sensing surface. <br><br>
+          
+          2. <b>Capacitive:</b> This type of sensor is used for detection of metallic objects and non-metallic objects.<br><br>
+          
+          3. <b>Photoelectric:</b> This type of sensor is used to detect objects. A light source and receiver are the main components of such sensors.<br><br>
+          
+          4. <b>Magnetic:</b> - This type of sensor uses an electrical switch that is operated based on the presence of permanent magnets in a sensing area.<br><br>
+          
+          
+          Most industrial proximity sensors (inductive, capacitive, ultrasonic and photo electric) are solid state. 
+          
+          The term solid state refers to the electronic components such as transistors used to switch the output of the sensor upon detection of an object. 
+          
+          Two specific types of 3 wire sensors are available; PNP and NPN. <br> 
+          1. <b>PNP proximity sensors:</b> PNP proximity sensors provide an active HIGH output. When an object enters the detecting range of the sensor, the output of the sensor is connected with +24V. It is also called ‘sourcing’ proximity sensor as it provides a positive voltage (source) when it senses an object.<br><br>
+          
+          2. <b>NPN proximity sensors:</b> NPN proximity sensors provide an active LOW output. This means that when an object enters the detecting range of the sensor, the output of the sensor is connected with the ground. It is also called ‘sinking’ proximity sensor as it provides zero voltage when it senses an object."<br><br>
+        </p>
+
+        <h3><b>Basic connection of both PNP and NPN proximity sensor are as shown in figure 1 and 2 respectively.</b></h3>
+        <center><img src="images\NPNtypePsensor.png" alt="NPN type Proximity Sensor" height="300" width="450" style="mix-blend-mode: darken;"></center>
+        <center><b style="font-size:16px;">Fig. 1 NPN Type Proximity Sensor</b></center><br><br>
+
+
+        <center><img src="images\PNPtypePsensor.png" alt="PNP type Proximity Sensor" height="300" width="450" style="mix-blend-mode: darken; -webkit-filter:contrast(120%);"></center><br>
+        <center><b style="font-size:16px;">Fig. 2 PNP Type Proximity Sensor</b></center>
+
+        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          An inductive proximity sensor has three terminals- two for power supply of sensor (positive and negative) and one for output signal of sensor. When the sensor senses a metallic object a positive voltage (High signal) is generated on the signal pin of the sensor. The load is always connected between this signal pin and ground of power supply (for PNP sensor). So, when the sensor senses a metallic object, the load gets a positive voltage from the signal pin of the sensor which completes the circuit and turns the load on. 
+Note, that the signal pin gives output only until the sensor senses a metallic object. As soon as the metallic object is removed, the output of the signal terminal vanishes.
+
+ 
+        </p>
+        <h3><b>Working Principle</b></h3>
+
+
+
+        <center><img src="images\control ckt.jpg" alt="Control Circuit" height="400"
+            width="500" style="mix-blend-mode: darken;"></center>
+        
+        <center><b style="font-size:16px;">Fig. 3 Control Circuit</b></center><br>
+
+        <center><img src="images\power ckt.jpg" alt="Power Circuit" height="400" width="550" style="mix-blend-mode: darken; -webkit-filter:contrast(120%);"></center>
+        <center><b style="font-size:16px;">Fig. 4 Power Circuit</b></center><br>
+
+        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          1. <b>Proximity Detection:</b> The proximity sensor continuously monitors for the presence of an object within its detection range. When an object is detected, the sensor outputs a signal, typically a voltage change.<br><br>
+          
+          2. <b>Signal Processing:</b> The output signal from the proximity sensor is fed into a timer circuit. The timer circuit processes this signal to initiate a time delay or to control the duration for which the DC load remains activated."<br><br>
+
+          3. <b>Activation of DC Load:</b> Based on the timer settings, the timer circuit sends a control signal to a relay or a transistor switch connected to the DC load. The DC load is then powered on or off according to the predefined timing conditions.<br><br>
+          
+        </p>
+
+            
+          <h3><b>Circuit Design and Implementation</b></h3>
+          <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+            1. Proximity Sensor Interface: Connect the proximity sensor to the input of the timer circuit. Ensure proper power supply and grounding for stable operation.<br><br>
+  
+            2. Timer Configuration: Configure the timer circuit (e.g., using a 555 Timer IC in monostable mode) to define the desired delay or activation period.<br><br>
+  
+            3. Control Mechanism: Use a relay or transistor as a switch to control the DC load based on the output from the timer circuit.<br><br>
+  
+            4. 4.	Power Supply: Ensure an adequate and stable DC power supply for both the sensor and the timer circuit.<br><br>
+  
+           </p>
+
+        <h3><b>Advantages of proximity sensor and timer</b></h3>
+        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+
+          1. Energy Efficiency: Reduces energy consumption by ensuring that DC loads operate only when necessary. <br><br>
+
+          2. Automation: Enhances the convenience and safety of automated systems by eliminating the need for manual operation.<br><br>
+
+          3. Extended Device Life: By limiting the operational time of DC loads, wear and tear are reduced, potentially extending the life of the devices.<br><br>
+        </p>
+
+                  
+        <h3><b>Applications of proximity sensor and timer</b></h3>
+        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+
+          1. Automatic Lighting Systems: Lights can be automatically turned on when someone enters a room and turned off after a specified period of no motion detected.<br><br>
+
+          2. Industrial Automation: Machinery can be activated when an object or material is detected and can be turned off after a specific time.<br><br>
+
+          3. Security Systems: Alarms can be triggered or cameras can be activated when movement is detected within a restricted area.<br><br>
+        
+        <h3><b>Conclusion</b></h3>
+        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          The integration of a proximity sensor and a timer circuit for operating a DC load provides an effective solution for automating various applications. The combination of sensor-based detection and precise timing control enhances operational efficiency and energy savings, making it a valuable approach in modern automation systems.<br>
+This theory provides a comprehensive understanding of how a DC load can be controlled using a proximity sensor and a timer circuit, highlighting the essential components, working principles, and practical applications of the system.
+
+        </p>
+
+        <!--Theory of experiment -->
+
+      </section>
+      <!-- /.content -->
+    </div>
+    <footer class="main-footer">
+      <h4 align="center">Lab contributed by Jodhpur Institute of Engineering & Technology<!-- Institute Name --> </h4>
+    </footer>
+  </div>
+
+</body>
+
+</html>
+<script>
+  function theory() {
+    document.getElementById("theory").style.backgroundColor = "#009dff";
+
+  }
+
+
+</script>
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

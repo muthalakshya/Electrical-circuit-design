@@ -1,0 +1,367 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Virtual Labs | Electrical Circuit Design Lab </title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+  <script>
+    window.onload = function () {
+      document.getElementById("theory").className = "active treeview";
+    }
+  </script>
+  <style>
+    #toggle_nav:hover {
+      background-color: #1261A0;
+    }
+
+    #aim {
+      background-color: #009dff;
+    }
+
+    #aim:hover,
+    #theory:hover,
+    #pretest:hover,
+    #procedure:hover,
+    #simulation:hover,
+    #result:hover,
+    #posttest:hover,
+    #references:hover {
+      background-color: #009dff;
+    }
+  </style>
+
+  <!-- Mathjs library -->
+
+  <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <!--Navigation Bar-->
+  <div class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://iitr.ac.in"><span><img src="images/iitrLogo.png"
+              style="margin-top:-15px;height:50px;width: 400px;"></span></a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <header class="main-header">
+      <!-- Logo -->
+      <a href="../index.html" class="logo"
+        style="background-color:#009dff; border-right:solid;border-right-color: #1261A0;">
+        <p align="center" style="font-size:16px;"><b>Electrical Circuit Design Lab</b></p>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top" style="background-color:#009dff;">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" id="toggle_nav">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <section class="content-header">
+          <ol class="breadcrumb">
+            <li>
+              <a href="../index.html"><i class="fa fa-dashboard"></i>Electrical Circuit Design Lab</a>
+            </li>
+            <li>
+              <a href="#" >To implement all Logic gates and operate DC load with the help of Push-to-ON and OFF switch and a switching relay.</a>
+            </li>
+            <li class="active">Theory</li>
+          </ol>
+        </section>
+      </nav>
+    </header>
+
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar" style="background-color:#1261A0;">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+          <div class="input-group"></div>
+        </form>
+        <!-- /.sear ch form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" style="background-color:#1261A0;">
+          <li class="treeview" id="aim">
+            <a href="index.html" id="aim">
+              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Aim</span>
+
+            </a>
+          </li>
+          <li class="treeview" id="theory">
+            <a href="theory.html" id="theory" onclick="theory()">
+              <i class="fa fa-files-o" style="color:white;"></i>
+              <span style="color:white;">Theory</span>
+            </a>
+          </li>
+          <!--   <li class="treeview" id="numerical">
+                    <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="program">
+                    <a href="program.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Program</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li> -->
+          <li class="treeview" id="pretest">
+            <a href="pretest.html" id="pretest">
+              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Pre Test</span>
+
+            </a>
+          </li>
+
+          <li class="treeview" id="procedure">
+            <a href="procedure.html" id="procedure">
+              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Procedure</span>
+            </a>
+          </li>
+          <li class="treeview" id="simulation">
+            <a href="simulation.html" id="simulation">
+              <i class="fa fa-laptop" style="color:white;"></i>
+              <span style="color:white;">Simulation</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+
+
+
+          <li class="treeview" id="posttest">
+            <a href=" posttest.html" id="posttest">
+              <i class=" fa fa-files-o" style="color:white;">
+              </i>
+              <span style="color:white;">Post Test</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+          <li class="treeview" id="ref">
+            <a href="references.html" id="references">
+              <i class="fa fa-files-o" style="color:white;"></i>
+              <span style="color:white;">References</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1 align="center">
+          To implement all Logic gates and operate DC load with the help of Push-to-ON and OFF switch and a switching relay.<!-- Write experiment name here -->
+        </h1>
+      </section>
+      <!-- Main content -->
+      <section class="content">
+        <h3><b>Introduction </b></h3>
+
+        <p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          A Logic gate is an electronic circuit designed by using electronic components like diodes, transistors, resistors, and more. As the name implies, a logic gate is designed to perform logical operations in digital systems like computers, communication systems, etc.
+A logic gate can take two or more inputs but produce only one output. The output of a logic gate depends on the combination of inputs and the logical operation that the logic gate performs.
+Following are the primary logic gates and their functions:</p>
+
+
+
+<p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+<strong>1. AND gate:</strong> 
+
+It is one of the three basic logic gates. It performs the logical multiplication of the inputs applied to it. For two-input AND gate, the Boolean expression is given by,
+<p style="font-size:160%; margin-top:1%; text-align: center; font-style:'Nunito sans', sans-serif;">
+  <strong>
+    Y=A.B  </strong></p>
+  <p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+    Where, A and B are inputs to the AND gate, while Y denotes the output of the AND gate.
+    </p>
+    <p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+      We can generalize the expression to any number of inputs: </p>
+      <p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+      Y=A.B.C.D . . ..</p>
+      <p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">The truth table, symbol and ladder logic of a two input AND gate is shown below,</p>
+      <center><img src="images\and gate.png" alt="not gate output" height="280" width="285" style="mix-blend-mode: darken; -webkit-filter:contrast(220%);"></center>
+      <p style="font-size:140%; margin-top:1%; text-align: center; font-style:'Nunito sans', sans-serif;">
+        <b>Truth Table 1</b></p><br>
+      <center><img src="images\andG.jpg" alt="not gate output" height="280" width="350" style="mix-blend-mode: darken; -webkit-filter:contrast(220%);"></center>
+      <center><b style="font-size:18px;">Fig. 1 Ladder logic for AND gate </b></center>
+
+
+
+<p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+  <strong>2. OR gate:</strong> 
+  
+  OR gate is also one of the basic logic gates and its primary function is to perform logical addition. For a two input OR gate, the Boolean expression is given by,
+  <p style="font-size:160%; margin-top:1%; text-align: center; font-style:'Nunito sans', sans-serif;">
+   <strong>Y=A+B </strong> </p> 
+    <p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+      Where, A and B are inputs to the OR gate, while Y denotes the output of the OR gate. </p>
+      <p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+        We can generalize the expression to any number of inputs:</p>
+        <p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          Y=A+B+C+D . . ..,</p>
+          <p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+            The truth table, symbol and ladder logic of a two input OR gate is shown below,</p>
+            <center><img src="images\or gate.png" alt="not gate output" height="280" width="285" style="mix-blend-mode: darken; -webkit-filter:contrast(220%);"></center>
+            <p style="font-size:140%; margin-top:1%; text-align: center; font-style:'Nunito sans', sans-serif;">
+              <b>Truth Table 2</b>
+            </p>
+            <center><img src="images\orG.jpg" alt="not gate output" height="280" width="350" style="mix-blend-mode: darken; -webkit-filter:contrast(220%);"></center>
+            <center><b style="font-size:18px;">Fig. 2 Ladder logic for OR gate </b></center>
+
+<p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+    <strong>3. NOT gate:</strong> 
+    The NOT gate is another basic logic gate which performs complement of the input applied to it. It can take only 1 input unlike other logic. The output of the NOT gate is complement of the input applied to it. The NOT gate is also called an inverter, as it performs inversion operation.
+For a NOT gate, the Boolean expression is given by,
+<p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+  <center><img src="images\not out.png" alt="not gate output" height="50" width="85" style="mix-blend-mode: darken; -webkit-filter:contrast(220%);"></center>
+
+  <p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+    The truth table symbol and ladder logic of a two input OR gate is shown below,</p>
+    <center><img src="images\not gate.png" alt="not gate" height="280" width="285" style="mix-blend-mode: darken; -webkit-filter:contrast(220%);"></center>
+    <p style="font-size:140%; margin-top:1%; text-align: center; font-style:'Nunito sans', sans-serif;">
+      <b> Table 3</b></p>
+
+      <center><img src="images\notG.jpg" alt="not gate" height="280" width="350" style="mix-blend-mode: darken; -webkit-filter:contrast(220%);"></center>
+      <center><b style="font-size:18px;">Fig. 3 Ladder logic for NOT gate </b></center>
+
+    <p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+      <strong>4. NAND gate:</strong> 
+      It is another type of universal logic gate used to perform inverse AND operation. Similar to NOR gate, NAND gate can also have multiple inputs but only single output. NAND gate is an AND gate followed by a NOT gate.
+The Boolean expression of a two input NAND gate is as below:
+
+  <center><img src="images\nand output.png" alt="nor output" height="30" width="80" style="mix-blend-mode: darken; -webkit-filter:contrast(220%);"></center>
+  <p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+    
+    
+    <p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+      The truth table, symbol and ladder logic of a two input OR gate is shown below,</p>
+      <center><img src="images\nand gate.png" alt="not gate output" height="280" width="285" style="mix-blend-mode: darken; -webkit-filter:contrast(220%);"></center>
+      <p style="font-size:140%; margin-top:1%; text-align: center; font-style:'Nunito sans', sans-serif;">
+        <b>Truth Table 4</b>
+      </p>
+      <center><img src="images\nandG.jpg" alt="not gate" height="280" width="350" style="mix-blend-mode: darken; -webkit-filter:contrast(220%);"></center>
+      <center><b style="font-size:18px;">Fig. 4 Ladder logic for NAND gate </b></center>
+
+      <p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+    <strong>5. NOR gate:</strong> 
+    Its is one of the two universal gates. A universal gate is a logic gate whose combination can be used to make any other logic gate. A NOR gate is an OR gate followed by a NOT gate.
+A NOR gate can have multiple inputs and gives a single output. It gives a high or logic 1 output only when all of its inputs are low or logic 0.
+The Boolean expression of a two input NOR gate is as below:
+<center><img src="images\nor output.png" alt="nor output" height="37" width="85" style="mix-blend-mode: darken; -webkit-filter:contrast(220%);"></center>
+<p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+  
+  
+  <p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+    The truth table, symbol and ladder logic of a two input OR gate is shown below,</p>
+
+    <center><img src="images\nor gate.png" alt="nor gate" height="280" width="285" style="mix-blend-mode: darken; -webkit-filter:contrast(220%);"></center>
+            <p style="font-size:140%; margin-top:1%; text-align: center; font-style:'Nunito sans', sans-serif;"><b>
+              Truth Table 5</b>
+            </p>
+            <center><img src="images\norG.jpg" alt="not gate" height="280" width="350" style="mix-blend-mode: darken; -webkit-filter:contrast(220%);"></center>
+            <center><b style="font-size:18px;">Fig. 5 Ladder logic for NOR gate </b></center>
+  
+            <p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+              From this experiment onwards all the experiments will be simulated using a Programmable Logic Controller (PLC) as making control circuit of these experiments on an industrial panel (as done for the previous experiments) will be very complex.
+            </p>
+            <p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+              A PLC is an industrial computing device used for managing electromechanical processes. A typical PLC consists of a power supply, CPU, Input/Output modules, ROM, RAM, and a programming device such as a PC. The input modules send an input signal into the PLC where it is processed by the CPU. The format of output data is specified by an application
+              program implemented on the programming device.
+                
+            </p>
+            <p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+              Various programming languages are used to program the PLC. One such language is Ladder logic programming. It uses graphical diagrams, which look like an electrical schematic, are based on relay circuit hardware to express the logical structure of processes in PLC software applications.
+            </p>
+            <p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+              A PLC monitors real-time data and is used in product assembly, packaging, motion control, batch control, machine diagnostics and testing, and robotics processes.
+            </p>
+
+            <p style="font-size:180%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+              <strong>Circuit operation </strong></p>
+
+            
+            
+            
+            <center><img src="images\exp6 control ckt.png" alt="control ckt" height="500" width="685" style="mix-blend-mode: darken; -webkit-filter:contrast(220%);"></center>
+            <p style="font-size:140%; margin-top:1%; text-align: center; font-style:'Nunito sans', sans-serif;">
+              <b>Fig. 6 The above control circuit will be used for the implementation of AND, OR, NAND, NOR logic gates only</b>
+          </p>
+          <center><img src="images\notcontrolckt.jpg" alt="control ckt" height="500" width="685" style="mix-blend-mode: darken; -webkit-filter:contrast(220%);"></center>
+          <p style="font-size:140%; margin-top:1%; text-align: center; font-style:'Nunito sans', sans-serif;">
+            <b>Fig. 7 The above control circuit will be used for the implementation of NOT logic gate only</b> 
+        </p><br><br>
+        <p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;"> 
+              <strong>Control circuit:</strong> The control circuit consists of a PLC module, a relay, two push-to-ON switches and a DC supply. The push-to-ON switches are connected between the positive of DC supply and input of the PLC (X0 and X1). The relay coil is connected to the output (Y0) of the PLC. The push-to-ON switches act as input device to the PLC. When the push button is pressed the input of PLC gets connected to the positive of the DC supply. This is taken as logic 1 or High in the Ladder logic program and the output is given to the relay according to the Ladder logic designed and implemented to the PLC.
+            </p>
+            <p style="font-size:140%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;"> 
+                     
+          <strong> Power circuit:</strong> The power circuit consists of NO contact of relay in series with the DC load. When the output of the logic gate is logic 1 or High (according to its truth table) then output Y0 of the PLC will give a positive voltage and the relay will get energized. Once the relay energizes its NO contact will become NC and the DC load will turn ON. The DC load can be a Fan, Buzzer, etc. 
+            </p>
+            <center><img src="Exp 6 - Final/images/power Instruction diagram.png" alt="control ckt" height="500" width="385" style="mix-blend-mode: darken; -webkit-filter:contrast(220%);"></center>
+            <center><b style="font-size:18px;">Fig. 8 Power Circuit </b></center>
+            <!--Theory of experiment -->
+
+      </section>
+      <!-- /.content -->
+    </div>
+    <footer class="main-footer">
+      <h4 align="center">Lab contributed by: Jodhpur Institute of Engineering & Technology</h4>
+    </footer>
+  </div>
+
+</body>
+
+</html>
+<script>
+  function theory() {
+    document.getElementById("theory").style.backgroundColor = "#009dff";
+
+  }
+
+
+</script>
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

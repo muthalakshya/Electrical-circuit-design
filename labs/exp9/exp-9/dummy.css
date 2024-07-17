@@ -1,0 +1,347 @@
+.main-hello{
+    margin-top: 4%;
+    display: none;
+    width: 98.4%;
+    height: 83.95%;
+    border: 5px solid black;
+    background-image: url(images/wood.jpg);
+    padding: 0.5%;
+    z-index: 1;
+}
+
+.header-hello {
+    margin: auto;
+    height: 1.8%;
+    width: 50.25%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 1% 0.5%;
+    font-size: larger;
+    border-radius: 5%;
+}
+
+.header-hello h2 {
+    /* height: 100%;
+    width: 100%; */
+    text-decoration-line: underline;
+    text-decoration-color: #ff0000;
+    text-decoration-thickness: 25%;
+    /* box-shadow: 1px 1px 5px 5px rgb(255, 46, 46); */
+}
+
+/* .footer-hello{
+    background-color:#000000;
+    color: white;
+    text-align: center;
+    padding: 0.5%;
+    box-shadow: 0 -4px 8px rgba(239, 237, 234, 0.1);
+    margin: 0 -0.52%;
+} */
+.area{
+    width: 98.5%;
+    height:86%;
+    display: flex;
+    margin: 1% 0 0.2% 0;
+    padding: 0.5%;
+    background-image: url(images/wood.jpg);
+}
+
+.component-header-hello{
+    width: 15%;
+    height: 100%;
+    text-align: center;
+    background-image: url(images/Wood-background.jpg);
+    border-radius: 1%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.component-label-hello{
+    height: 6%;
+    background-color: white;
+    font-size: larger;
+    color: #000000;
+}
+.componet-symbol{
+    height: 90%;
+    width: 94%;
+    margin-left: 2.8%;
+    /* padding: 0 16%; */
+    color: #000000;
+}
+.componet-symbol div {
+    height: 25%;
+    width: 100%;
+   
+    margin: 10% 0%;
+    /* background-color: white; */
+}
+
+.componet-symbol div div{
+    height: 60%;
+    width: 100%;
+    border-radius: 10%;
+    margin: 0 4%;
+    background-color: white;
+    padding-top: 10%;
+}
+
+.main-area{
+    width: 84%;
+    height: 100%;
+    margin-left: 1%;
+    background-color: #ffffff;
+    border-radius: 1%;
+}
+
+.inside{
+    width:98%;
+    height: 91%;
+    margin: 1%;
+    padding: 1% 0;
+    background-color: #ff0000;
+    border-radius: 1%;
+}
+
+.inside-tab{
+    position: relative;
+    width:97%;
+    height: 98%;
+    margin: 0 1%;
+    background-color: #ffffff;
+    border: 5px solid black;
+}
+
+
+.hello-but{
+    background-color: #f67c12ac;
+}
+
+.controlBut-hello{
+    border: white;font-size: 100% ;height: 80%; width:20%;  color: white;
+    border-radius: 2%;
+    background-color: #f1a900;
+    padding: 0.5%;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #f5885a;
+    margin: 0.5% 2%;
+    color: black;
+}
+.controlBut-hello:hover{
+    background-color: rgb(242, 129, 64);
+    box-shadow: 5px 5px 8px 5px #f1f0ea;
+}
+.controlBut-hello:active{
+    background-color: rgb(240, 148, 27);
+    background-image: linear-gradient(to bottom, #e6b410, #edb007);
+}
+.plc-close-hello{
+    width: 5%;position: absolute;left: 94%;top: -10%;height: 8%;
+    color: rgb(0, 0, 0);
+    font-size: 250%;
+    background-color: #ff0000 !important;
+    border-radius: 10%;
+    background-image: url(images/wood.jpg);
+}
+.custom-swal-popup {
+    width: 250px !important;
+    height: 250px !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.custom-swal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+}
+.custom-swal-title,
+.custom-swal-actions,
+.custom-swal-icon {
+    display: none;
+}
+.custom-swal-input {
+    width: 80%; 
+    margin-left: 20px;
+    font-size: 12px;
+}
+
+.swal2-container {
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    padding-top: 50px !important; 
+    padding-left: 50px !important; 
+}
+
+.controlBut-hello{
+    border: white;font-size: 100% ;height: 80%; width:20%;  color: white;
+    border-radius: 2%;
+    background-color: #f1a900;
+    padding: 0.5%;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #f5885a;
+    margin: 0.5% 2%;
+    color: black;
+}
+.controlBut-hello:hover{
+    background-color: rgb(242, 129, 64);
+    box-shadow: 5px 5px 8px 5px #f1f0ea;
+}
+.controlBut-hello:active{
+    background-color: rgb(240, 148, 27);
+    background-image: linear-gradient(to bottom, #e6b410, #edb007);
+}
+
+.instructions-hello {
+    background-color: rgb(255, 123, 0);
+    border: none;
+    color: rgb(119, 108, 108);
+    padding: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.instructions-hello:hover {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    box-shadow: 10px 6px 20px 25px rgba(0, 0, 0, 0.2);
+}
+.instructions-hello:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.instructions-hello:disabled {
+    background-color: #e0e0e0;
+    color: #a0a0a0;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.bar-hello{
+    cursor: pointer;
+    width: 98%;
+   
+    background-color:  rgb(255, 255, 255);
+   
+    margin: 1% ;
+    border-right: 1px solid rgb(0, 1, 8);
+    color: rgb(255, 0, 0);
+    text-align: center;
+   
+    padding-top: 0.5%;
+    font-size: 150%;
+    border-radius: 2%;
+    font-weight: 700;
+}
+
+.bar-hello:hover{
+    box-shadow: 10px 10px 60px 20px #fcfbf9;
+    background-color:   rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.bar-hello:active{
+    background-color: rgb(55, 9, 237);
+    color: whitesmoke;
+}
+.bar-hello-reset{                   
+  
+    height: 50%;
+    cursor: pointer;
+    width: 98%;
+   
+    background-color: rgb(198, 55, 55);
+   
+    margin: 1% 0;
+    border-right:1px solid rgb(1, 0, 8);
+    color: rgb(255, 255, 255);
+    text-align: center;
+   
+    padding-top: 0.5%;
+    font-size: 150%;
+    border-radius: 2%;
+    font-weight: 600;
+}
+
+
+
+.instruction-hello-inner{
+    position: absolute;
+    height: 65%;
+    width: 93%;
+    background-color:  rgb(255, 255, 255);
+    border: 5px solid rgb(9, 9, 10);
+    padding:2%  2%;
+    top: -100%;
+    z-index: 1;
+    left: 1%;
+    color: rgb(0, 0, 0);
+    transition: 1s;
+    display: flex;
+    justify-content: space-between;
+    font-size: large;
+}
+
+.instruction-hello-inner button{
+    height: 100%;
+    cursor: pointer;
+    width: 100%;
+    margin-right: 2%;
+    font-size: 50px;
+    color:  #ed1f03;
+    border:none;
+    margin-left: auto;
+    border-radius: 35%;
+}
+
+
+.instruction-hello-inner button:hover{
+    box-shadow: 5px 5px 50px 5px #ff0000;
+}
+.instruction-hello-inner button:active{
+    background-color: rgb(4, 4, 3);
+}
+
+#chg::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+
+  #chg::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+
+  #chg::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 10px;
+  }
+
+  #chg::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+
+  .inside-tab div:hover{
+    box-shadow: 2px 2px 40px 2px #ff0000;
+    cursor: pointer;
+}
+.inside-tab div:active{
+    background-color: rgb(4, 4, 3);
+}
+.componet-symbol div div:hover{
+    box-shadow: 2px 2px 40px 2px #ff0000;
+    background-color: #40ff00 !important;
+    cursor: pointer;
+}
+.componet-symbol div div:active{
+    background-color: rgb(4, 4, 3);
+}
