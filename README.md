@@ -1,69 +1,7 @@
 ﻿# Electrical-circuit-design-lab
-A
 
-PRACTICAL TRAINING SEMINAR REPORT ON
-Web Development
-In partial fulfillment of
-B-Tech II year (Data Science)
-
-
-
-Session 2023-24 Summer Training From
-Virtual Lab IIT Roorkee
-
-
-
-
-
-
-
-
-
-
-Department of Technology JIET, Jodhpur
  
-Acknowledgment
 
-
-
-
-I express my admiration and convey my sincere thanks to our mentor                              Mr. Pratik Bhansali for his invaluable and expert supervision & guidance throughout the course and concern to make this task a success.
-                                                       I would like to record my heartfelt gratitude to our ma’am Dr. Pratibha Peshwa Swami for her wisdom and words that were not only educating, stimulating and delightful but also served as a powerful beacon to give directions by endeaver.
-
-I would also like to express my love and respect for my family and friends for their affectionate encouragement. It would have been impossible to accomplish this task without the blessing of almighty. 
-                                 
-                                                                                    
-                                                                                    Lakshya Mutha
-
-
-
-
-
-
-
-
-Preface
-
-
-The electric circuit design lab simulation project at IIT Roorkee Virtual Lab represents an innovative step towards enhancing the educational experience in electrical engineering and related fields. This project, driven by the need to provide interactive and accessible learning tools, aims to bridge the gap between theoretical knowledge and practical application, allowing students and professionals to gain a deeper understanding of electric circuit concepts through hands-on experimentation.
-
-The journey of developing this simulation involved the integration of various modern web technologies, including HTML, CSS, JavaScript, jQuery, jsPlumb, Bootstrap, SweetAlert, and TailwindCSS. Each of these technologies played a crucial role in creating a robust and user-friendly platform that could simulate complex electrical circuits and their behaviors. The project also leveraged the power of modular design, ensuring that the simulation could be easily maintained and expanded in the future.
-
-This report documents the comprehensive process of creating the electric circuit design lab simulation, from the initial architectural planning to the implementation of specific experiments. It provides detailed insights into the project's technical aspects, including the architectural overview, functional block diagrams, flow charts, and code snippets. Additionally, it highlights the educational applications of the simulation and discusses potential future enhancements.
-
-The successful completion of this project would not have been possible without the guidance and support of Mr. Pratik Bhansali, whose expertise in electrical engineering and educational technologies provided invaluable insights and direction. His mentorship ensured that the project adhered to high standards of quality and educational value.
-
-This preface sets the stage for the detailed exploration of the project, offering readers an overview of the objectives, methodologies, and outcomes of the electric circuit design lab simulation. It is our hope that this report will serve as a valuable resource for educators, students, and professionals seeking to enhance their understanding of electric circuits and their practical applications. 
-CERTIFICATE FROM THE COMPANY
-
-
-This is to certify that Lakshya Mutha of B Tech 2nd Year of  Jodhpur Institute of Engineering and Technology, Jodhpur, has completed this project under my supervision and guidance. He has taken proper care and has shown utmost sincerity in completion of this project.
-
-I certify that this project is up to my expectations and as per guidelines issued by JIET UNIVERSE.
-                                          
-                                          
-    Dr. Pratibha Peshwa Swami                          Mr. Pratik Bhansali
-Head Of Department - Technology                      Assistant Professor
  
 1.	Table of Contents
 ACKNOWLEDGMENT	2
