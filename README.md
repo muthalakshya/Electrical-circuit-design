@@ -142,6 +142,8 @@ Key Modules:
 •	Relay: Controls the flow of current to the load based on the switch state.
 •	DC and AC Loads: Represent the devices being powered by the relay.
 Flow Chart:
+![image](https://github.com/user-attachments/assets/066563d8-e6f5-4925-b268-fb54008916e3)
+
  
 Fig 1.  Circuit Diagram of exp -1
  
