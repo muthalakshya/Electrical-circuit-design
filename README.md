@@ -1,108 +1,4 @@
-A
-
-INDUSTRIAL TRAINING REPORT 
-ON
-Web Development
-
-Submitted for the Partial Fulfillment of the Requirement of the
-
-Degree
-
-Of
-
-BACHELOR OF TECHNOLOGY
-
-In
-
-CSE (Data Science)
-
-
-
-Session 2023-24 Summer Training From
-Virtual Lab IIT Roorkee
-
-
-
-
-
-
-
-
-Department of Technology 
-Jodhpur Institute of Engineering & Technology 
-JIET Group of Institutions, Jodhpur 
-Acknowledgment
-
-
-
-
-I express my admiration and convey my sincere thanks to our mentor                              Mr. Pratik Bhansali for his invaluable and expert supervision & guidance throughout the course and concern to make this task a success.
-                                                       I would like to record my heartfelt gratitude to our ma’am Dr. Pratibha Peshwa Swami for her wisdom and words that were not only educating, stimulating and delightful but also served as a powerful beacon to give directions by endeaver.
-
-I would also like to express my love and respect for my family and friends for their affectionate encouragement. It would have been impossible to accomplish this task without the blessing of almighty. 
-                                 
-                                                                                    
-                                                                                    Lakshya Mutha
-
-
-
-
-
-
-
-
-Preface
-
-
-The electric circuit design lab simulation project at IIT Roorkee Virtual Lab represents an innovative step towards enhancing the educational experience in electrical engineering and related fields. This project, driven by the need to provide interactive and accessible learning tools, aims to bridge the gap between theoretical knowledge and practical application, allowing students and professionals to gain a deeper understanding of electric circuit concepts through hands-on experimentation.
-
-The journey of developing this simulation involved the integration of various modern web technologies, including HTML, CSS, JavaScript, jQuery, jsPlumb, Bootstrap, SweetAlert, and TailwindCSS. Each of these technologies played a crucial role in creating a robust and user-friendly platform that could simulate complex electrical circuits and their behaviors. The project also leveraged the power of modular design, ensuring that the simulation could be easily maintained and expanded in the future.
-
-This report documents the comprehensive process of creating the electric circuit design lab simulation, from the initial architectural planning to the implementation of specific experiments. It provides detailed insights into the project's technical aspects, including the architectural overview, functional block diagrams, flow charts, and code snippets. Additionally, it highlights the educational applications of the simulation and discusses potential future enhancements.
-
-The successful completion of this project would not have been possible without the guidance and support of Mr. Pratik Bhansali, whose expertise in electrical engineering and educational technologies provided invaluable insights and direction. His mentorship ensured that the project adhered to high standards of quality and educational value.
-
-This preface sets the stage for the detailed exploration of the project, offering readers an overview of the objectives, methodologies, and outcomes of the electric circuit design lab simulation. It is our hope that this report will serve as a valuable resource for educators, students, and professionals seeking to enhance their understanding of electric circuits and their practical applications. 
-CERTIFICATE FROM THE COMPANY
-
-
-This is to certify that Lakshya Mutha of B Tech 2nd Year of  Jodhpur Institute of Engineering and Technology, Jodhpur, has completed this project under my supervision and guidance. He has taken proper care and has shown utmost sincerity in completion of this project.
-
-I certify that this project is up to my expectations and as per guidelines issued by JIET UNIVERSE.
-                                          
-                                          
-    Dr. Pratibha Peshwa Swami                          Mr. Pratik Bhansali
-Head Of Department - Technology                      Assistant Professor
- 
-Contents
-Candidate’s Declaration	i
-Acknowledgment	ii
-Preface	iii
-CERTIFICATE FROM THE COMPANY	iv
-1.	Introduction	2
-Background	2
-Objectives	2
-Scope	3
-2.	Company/Organization Overview	4
-Company/Organization Overview	4
-Details about Training Mentor 	6
-3.	Technology used in Project	7
-Front end development	7
-Back end development	8
-Visualization	9
-User-Interaction	10
-4.	Technical Details of Project/Study	11
-Architectural Overview	7
-Functional Block DiagramVisualization	9
-Functions/Modules Details	10
-5.	Applications	34
-6.	Future Work	36
-7.	Conclusion	38
-References	39
-
-
-
-1.	Introduction
+# 1. Introduction
 
 The introduction of this report outlines the background, objectives, and scope of the Electric Circuit Design Lab Simulation project, which was developed during my training at IIT Roorkee Virtual Lab. This section provides context for the project, highlighting its significance in the realm of engineering education and its potential to transform the way electrical engineering concepts are taught and understood.
 Background
@@ -124,9 +20,9 @@ The scope of the Electric Circuit Design Lab Simulation project encompasses the 
 5.	Advanced Switching and Motor Starting Techniques: Simulations that demonstrate the use of 3-way switches for multi-floor connections and the starting of 3-phase induction motors using Direct On-Line (DOL) and Automatic Star-Delta starters.
 By covering a broad range of topics, the project aims to provide students with a comprehensive understanding of electrical engineering concepts and their practical applications. The simulations are designed to be modular and scalable, allowing for future expansion and the addition of new experiments.
 
-2.	Company/Organization Overview
+# 2.	Company/Organization Overview
 
-2.1	Company/Organization Technology area
+## 2.1	Company/Organization Technology area
 
 This section provides an overview of IIT Roorkee Virtual Lab, the organization responsible for overseeing the Electric Circuit Design Lab Simulation project. It outlines the mission, goals, and technological focus of the Virtual Lab, as well as the role of the training mentor, Mr. Rajeev Kumar, in guiding the development of the project.
 IIT Roorkee Virtual Lab
@@ -157,7 +53,7 @@ Mr. Kumar's role as a mentor involved:
 
 
 
-2.2	Details about the training guide/mentor at the company/organization.
+## 2.2	Details about the training guide/mentor at the company/organization.
 
   	Training Mentor: Mr. Rajeev Kumar
 Mr. Rajeev Kumar is a distinguished professor of electrical engineering at IIT Roorkee and a leading expert in the field of educational technology. As the training mentor for the Electric Circuit Design Lab Simulation project, Mr. Kumar provided invaluable guidance and support throughout the development process.
@@ -184,12 +80,12 @@ Mr. Rajeev Kumar is a distinguished professor of electrical engineering at IIT R
 
 
  
-3.	Technology used in Project
+# 3.	Technology used in Project
 
 The Technology Used in Project section provides a detailed overview of the various technologies and tools employed in the development of the Electric Circuit Design Lab Simulation. This section highlights the role of each technology in creating a user-friendly and visually appealing simulation environment, as well as its contribution to the overall functionality and effectiveness of the project.
 
 
-3.1 Frontend Development
+## 3.1 Frontend Development
 
 The frontend development of the Electric Circuit Design Lab Simulation focused on creating a visually appealing and user-friendly interface that allows students to interact with the simulations effortlessly. The following technologies were employed in the frontend development:
 
@@ -210,7 +106,7 @@ Bootstrap and TailwindCSS are popular CSS frameworks that were used to enhance t
 •	TailwindCSS: TailwindCSS's utility-first approach provided greater flexibility in styling, enabling the customization of design elements to match the project's unique aesthetic. The framework's modular nature allowed for the efficient application of styles, ensuring a clean and maintainable codebase.
 Together, Bootstrap and TailwindCSS contributed to the creation of a polished and responsive user interface, enhancing the overall user experience.
 
-3.2 Backend/Logic
+## 3.2 Backend/Logic
 
 The backend logic of the Electric Circuit Design Lab Simulation was developed using JavaScript and jQuery, two powerful scripting languages that enable dynamic interactions and logic implementation.
 
@@ -229,7 +125,7 @@ jQuery, a lightweight JavaScript library, was used to simplify and streamline th
 •	Animation and Effects: Enhance the user experience with smooth animations and visual effects, making the simulations more engaging and interactive.
 jQuery's simplicity and flexibility complemented JavaScript, enabling the efficient implementation of complex interactions and logic.
 
-3.3 Visualization
+### 3.3 Visualization
 
 The visualization of circuit components and interactions was achieved using jsPlumb, a JavaScript library designed for creating interactive and connectable elements.
 
@@ -244,7 +140,7 @@ jsPlumb's powerful visualization capabilities made it an essential tool for crea
 
 
 
-3.4 User Interaction
+#### 3.4 User Interaction
 
 User interaction within the simulations was enhanced using SweetAlert, a JavaScript library that provides customizable alerts and notifications.
 
@@ -256,10 +152,10 @@ SweetAlert was used to create interactive alerts and notifications that guide us
 •	Customization: Customize the appearance and behavior of alerts to match the project's design aesthetic and ensure consistency.
 SweetAlert's interactive alerts enhanced the user experience, providing valuable feedback and guidance throughout the simulations.
  
-4.	Technical Details of Project/Study
+# 4.	Technical Details of Project/Study
 
 
-4.1	Architectural Overview
+## 4.1	Architectural Overview
 The architectural overview outlines the high-level design and structure of the Electric Circuit Design Lab Simulation. The project is built on a client-side architecture, leveraging web technologies to deliver a responsive and interactive user experience.
 Client-Side Architecture
 The simulation is designed as a single-page application (SPA), allowing users to interact with the simulations without the need for page reloads. The client-side architecture ensures that all interactions and logic are handled within the browser, providing a seamless and efficient experience.
@@ -277,7 +173,7 @@ The simulation is designed as a single-page application (SPA), allowing users to
 
 
 
-4.2	Functional Block Diagram
+## 4.2	Functional Block Diagram
 The functional block diagram provides a detailed view of the main components and their interactions within the electric circuit design lab simulation. This diagram highlights the key functional blocks, including the user interface, control logic, sensors, relays, and loads. Each block is responsible for a specific aspect of the simulation, working together to create a cohesive and interactive learning experience.
 The user interface block encompasses all the visual and interactive elements that users engage with. This includes buttons, switches, and circuit diagrams, which are implemented using HTML, CSS, and JavaScript. The control logic block, primarily managed by JavaScript and jQuery, handles the behavior of circuit components and the response to user inputs. It ensures that the simulation accurately reflects the intended operations of the electric circuits.
 The sensor block represents various input devices, such as proximity sensors and timers, that detect and respond to environmental conditions. These sensors are crucial for experiments that involve automatic detection and control. The relay block includes the components that manage the flow of current to different loads, based on user inputs and control logic. Relays play a key role in switching and controlling electrical loads within the simulations.
@@ -291,25 +187,27 @@ The load block represents the devices being powered by the circuits, including D
 
 
 
-4.3	Functions/Modules Details
+## 4.3	Functions/Modules Details
 	
-Experiment 1: To operate DC and AC load with Push to ON & OFF Switch and a Switching Relay
+### Experiment 1: To operate DC and AC load with Push to ON & OFF Switch and a Switching Relay
 Description: This experiment simulates the operation of DC and AC loads using a push-button switch and a relay. When the switch is pressed, the relay activates, allowing current to flow to the load. This basic operation demonstrates the fundamental concept of controlling electrical loads with a switch.
 Key Modules:
 •	Push Button Switch: Detects user input and toggles the relay.
 •	Relay: Controls the flow of current to the load based on the switch state.
 •	DC and AC Loads: Represent the devices being powered by the relay.
 Flow Chart:
- 
+![image](https://github.com/user-attachments/assets/41bb7e3b-3a54-43dc-917b-c3f226d3a68a)
+
 Fig 1.  Circuit Diagram of exp -1
- 
+ ![image](https://github.com/user-attachments/assets/e6065fb2-3d70-4df3-a2a9-ab0ed3c9c10b)
+
 Fig 2.  Simulation of exp -1
 
 
 
 
 
-Experiment 2: To operate DC and AC load with Push to ON & OFF switch and a Switching Relay with holding circuit
+### Experiment 2: To operate DC and AC load with Push to ON & OFF switch and a Switching Relay with holding circuit
 
 Description: This experiment builds on the previous one by adding a holding circuit. The holding circuit ensures that the load remains powered even after the switch is released until the circuit is manually broken. This is useful in applications where the load needs to stay on after the initial activation.
 Key Modules:
@@ -318,15 +216,16 @@ Key Modules:
 •	Relay
 •	DC and AC Loads
 Flow Chart:
- 
+
+ ![image](https://github.com/user-attachments/assets/9c4ee170-6722-487c-acaf-931a9c4db8f5)
 Fig 3.  Circuit Diagram of exp -2
 
- 
+![image](https://github.com/user-attachments/assets/f6259f8c-f0a1-4b5f-84aa-5994e6363c7b)
 Fig 4.  Simulation of exp -2
 
 
 
-Experiment 3: To operate a DC motor in forward and reverse direction with two switching relays with interlocking circuit
+### Experiment 3: To operate a DC motor in forward and reverse direction with two switching relays with interlocking circuit
 Description: This simulation demonstrates how to control the direction of a DC motor using two relays with an interlocking circuit. The interlocking circuit prevents both relays from being activated simultaneously, avoiding short circuits and ensuring safe operation.
 Key Modules:
 •	Two Relays: Control the motor direction (forward and reverse).
@@ -335,14 +234,16 @@ Key Modules:
 Flow Chart:
 
  
+![image](https://github.com/user-attachments/assets/68579d9d-a711-4d72-8118-4fec77696e33)
 Fig 5.  Circuit Diagram of exp -3
  
+![image](https://github.com/user-attachments/assets/906d5fac-b750-4050-9c6c-fddd351a1f4b)
 Fig 6.  Simulation of exp -3
 
 
 
 
-Experiment 4: To operate a DC load using a proximity sensor and timer circuit
+### Experiment 4: To operate a DC load using a proximity sensor and timer circuit
 Description: This experiment simulates the use of a proximity sensor to detect the presence of an object and a timer circuit to control the duration for which the load remains powered. This is commonly used in automatic lighting and similar applications.
 Key Modules:
 •	Proximity Sensor: Detects objects and triggers the timer.
@@ -352,9 +253,11 @@ Key Modules:
 
 Flow Chart:
  
+![image](https://github.com/user-attachments/assets/f5134a08-89b6-4637-95b5-7a4878ab1370)
 Fig 7.  Circuit Diagram of exp -4
 
  
+![image](https://github.com/user-attachments/assets/7d2eee73-c203-482a-b567-24e1ee21d690)
 Fig 8.  Simulation of exp -4
 
 
@@ -362,7 +265,7 @@ Fig 8.  Simulation of exp -4
 
 
 
-Experiment 5: To operate a DC load using a proximity sensor and counter circuit
+### Experiment 5: To operate a DC load using a proximity sensor and counter circuit
 Description: Similar to the previous experiment, this simulation uses a proximity sensor but adds a counter circuit to keep track of the number of times the sensor is activated. This can be used in counting applications such as entry or exit monitoring.
 Key Modules:
 •	Proximity Sensor
@@ -372,15 +275,17 @@ Key Modules:
 
 Flow Chart:
  
+![image](https://github.com/user-attachments/assets/594cc6a2-627c-4990-b1bd-e61565cfb375)
 Fig 9.  Circuit Diagram of exp -5
 
  
+![image](https://github.com/user-attachments/assets/7a2ebfa3-cbb5-48d3-87ba-affc8dcd1579)
 Fig 10.  Simulation of exp -5
 
 
 
 
-Experiment 6: To implement all logic gates and operate the DC load with Push to ON & OFF switch and a switching relay
+### Experiment 6: To implement all logic gates and operate the DC load with Push to ON & OFF switch and a switching relay
 Description: This experiment demonstrates the use of basic logic gates (AND, OR, NOT, NAND, NOR, XOR, XNOR) to control a DC load with a push-button switch and a relay. It provides an understanding of how logic gates can be used in practical circuits.
 Key Modules:
 •	Logic Gates: Perform logical operations based on input states.
@@ -390,12 +295,14 @@ Key Modules:
 
 Flow Chart:
  
+![image](https://github.com/user-attachments/assets/16e2c17f-226c-40ca-a151-fd7107da50ac)
 Fig 11.  Circuit Diagram of exp -6
  
+![image](https://github.com/user-attachments/assets/2c572431-a771-4b88-9b15-8914e36c5e1d)
 Fig 12.  Simulation of exp -6
 
 
-Experiment 7: To design a logic for a 3-Way Switch connecting 3-floors with a single load
+### Experiment 7: To design a logic for a 3-Way Switch connecting 3-floors with a single load
 Description: This simulation shows how to control a single load from three different switches located on different floors. It involves designing a logic circuit that allows the load to be controlled from any switch, providing flexibility and convenience.
 Key Modules:
 •	Three-Way Switches: Allow control from multiple locations.
@@ -405,11 +312,14 @@ Key Modules:
 
 Flow Chart:
  
+![image](https://github.com/user-attachments/assets/8027a88a-9e26-4774-9dad-7792b30271f6)
 Fig 13.  Circuit Diagram of exp -7
 
  
+![image](https://github.com/user-attachments/assets/96d20eca-a00d-4bb5-85dd-23cbf1b41807)
 Fig 14.  Simulation of exp -7
 
+![image](https://github.com/user-attachments/assets/e149ea47-6c51-4080-a2af-56aaf2ac0985)
 Fig 15. PLC   Ladder Logic of exp -7
 
 
@@ -429,7 +339,7 @@ Fig 15. PLC   Ladder Logic of exp -7
 
 
 
-Experiment 8: To design a logic for starting a 3-phase Induction Motor by Direct on-Line (DOL) Starter
+### Experiment 8: To design a logic for starting a 3-phase Induction Motor by Direct on-Line (DOL) Starter
 Description: This experiment simulates the logic for starting a 3-phase induction motor using a Direct on-Line (DOL) starter, which applies full voltage directly to the motor terminals. This is a common method for starting motors in industrial applications.
 Key Modules:
 •	DOL Starter: Directly connects the motor to the power supply.
@@ -438,10 +348,13 @@ Key Modules:
 
 Flow Chart:
  
+![image](https://github.com/user-attachments/assets/7a33fa8a-e336-4b41-b585-0568a37b517d)
 Fig 16.  Circuit Diagram of exp -8
 
  
+![image](https://github.com/user-attachments/assets/623281c0-3156-4bb9-8066-f05940bca4c1)
 Fig 17.  Simulation of exp -8
+![image](https://github.com/user-attachments/assets/36f02dc5-b76f-47cb-9832-4aae8268cd31)
 Fig 18. PLC   Ladder Logic of exp -8
 
 
@@ -457,7 +370,7 @@ Fig 18. PLC   Ladder Logic of exp -8
 
 
 
-Experiment 9: To design a logic for starting a 3-phase Induction Motor by Automatic Star-Delta Starter
+### Experiment 9: To design a logic for starting a 3-phase Induction Motor by Automatic Star-Delta Starter
 Description: This simulation demonstrates the use of an automatic star-delta starter to reduce the starting current of a 3-phase induction motor. The motor starts in star configuration and then switches to delta configuration to handle the full load.
 Key Modules:
 •	Star-Delta Starter: Controls the motor start sequence, transitioning from star to delta configuration.
@@ -466,15 +379,18 @@ Key Modules:
 
 Flow Chart:
   
+![image](https://github.com/user-attachments/assets/f10cb5e7-2c7b-4d15-8af7-d992e81282a6)
 Fig 19.  Circuit Diagram of exp -9
  
+![image](https://github.com/user-attachments/assets/7738b2a1-29b0-4c97-958a-e90505e3dfb9)
 Fig 20.  Simulation of exp -9
 
+![image](https://github.com/user-attachments/assets/5f750f00-9360-4d7b-a52d-74d242ead8e3)
 Fig 21. PLC   Ladder Logic of exp -9
 
 
  
-5.	Applications
+# 5.	Applications
 
 
 
@@ -499,7 +415,7 @@ The simulations can be used in outreach programs to increase public awareness of
 Outcome: 
 The diverse applications of the Electric Circuit Design Lab Simulation highlight its potential to enhance educational outcomes, support professional development, and contribute to research and public awareness. The platform's versatility and accessibility make it a valuable resource for a wide range of users.
  
-6.	Future Work
+# 6.	Future Work
 
 
 Integration with AR/VR Technologies: 
@@ -528,7 +444,7 @@ Integrating the simulations with Learning Management Systems (LMS) will streamli
 Outcome: 
 The proposed future work will enhance the Electric Circuit Design Lab Simulation platform, expanding its capabilities and improving its functionality. By incorporating new technologies, features, and enhancements, the project will continue to provide valuable educational resources and support the advancement of electrical engineering education.
  
-7.	Conclusion
+# 7.	Conclusion
 
 
 The Electric Circuit Design Lab Simulation project has successfully achieved its objectives, providing an innovative and interactive tool for exploring and understanding electrical engineering concepts. The development process, guided by Mr. Rajeev kumar and supported by modern web technologies, has resulted in a robust and user-friendly simulation platform.
@@ -553,7 +469,7 @@ The project’s future directions include exploring new technologies, expanding 
 
 
 
-8.	References
+# 8.	References
 
 	Darren Ashby, "Circuit Design: Know It All", Newnes, 1st Edition, 2008
 
