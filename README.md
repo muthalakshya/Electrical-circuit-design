@@ -218,9 +218,11 @@ Key Modules:
 Flow Chart:
 
  ![image](https://github.com/user-attachments/assets/9c4ee170-6722-487c-acaf-931a9c4db8f5)
+
 Fig 3.  Circuit Diagram of exp -2
 
 ![image](https://github.com/user-attachments/assets/f6259f8c-f0a1-4b5f-84aa-5994e6363c7b)
+
 Fig 4.  Simulation of exp -2
 
 
@@ -235,9 +237,11 @@ Flow Chart:
 
  
 ![image](https://github.com/user-attachments/assets/68579d9d-a711-4d72-8118-4fec77696e33)
+
 Fig 5.  Circuit Diagram of exp -3
  
 ![image](https://github.com/user-attachments/assets/906d5fac-b750-4050-9c6c-fddd351a1f4b)
+
 Fig 6.  Simulation of exp -3
 
 
@@ -254,10 +258,12 @@ Key Modules:
 Flow Chart:
  
 ![image](https://github.com/user-attachments/assets/f5134a08-89b6-4637-95b5-7a4878ab1370)
+
 Fig 7.  Circuit Diagram of exp -4
 
  
 ![image](https://github.com/user-attachments/assets/7d2eee73-c203-482a-b567-24e1ee21d690)
+
 Fig 8.  Simulation of exp -4
 
 
@@ -276,10 +282,12 @@ Key Modules:
 Flow Chart:
  
 ![image](https://github.com/user-attachments/assets/594cc6a2-627c-4990-b1bd-e61565cfb375)
+
 Fig 9.  Circuit Diagram of exp -5
 
  
 ![image](https://github.com/user-attachments/assets/7a2ebfa3-cbb5-48d3-87ba-affc8dcd1579)
+
 Fig 10.  Simulation of exp -5
 
 
@@ -296,9 +304,11 @@ Key Modules:
 Flow Chart:
  
 ![image](https://github.com/user-attachments/assets/16e2c17f-226c-40ca-a151-fd7107da50ac)
+
 Fig 11.  Circuit Diagram of exp -6
  
 ![image](https://github.com/user-attachments/assets/2c572431-a771-4b88-9b15-8914e36c5e1d)
+
 Fig 12.  Simulation of exp -6
 
 
@@ -313,13 +323,16 @@ Key Modules:
 Flow Chart:
  
 ![image](https://github.com/user-attachments/assets/8027a88a-9e26-4774-9dad-7792b30271f6)
+
 Fig 13.  Circuit Diagram of exp -7
 
  
 ![image](https://github.com/user-attachments/assets/96d20eca-a00d-4bb5-85dd-23cbf1b41807)
+
 Fig 14.  Simulation of exp -7
 
 ![image](https://github.com/user-attachments/assets/e149ea47-6c51-4080-a2af-56aaf2ac0985)
+
 Fig 15. PLC   Ladder Logic of exp -7
 
 
@@ -348,13 +361,18 @@ Key Modules:
 
 Flow Chart:
  
+
 ![image](https://github.com/user-attachments/assets/7a33fa8a-e336-4b41-b585-0568a37b517d)
+
 Fig 16.  Circuit Diagram of exp -8
 
  
 ![image](https://github.com/user-attachments/assets/623281c0-3156-4bb9-8066-f05940bca4c1)
+
 Fig 17.  Simulation of exp -8
+
 ![image](https://github.com/user-attachments/assets/36f02dc5-b76f-47cb-9832-4aae8268cd31)
+
 Fig 18. PLC   Ladder Logic of exp -8
 
 
@@ -380,12 +398,15 @@ Key Modules:
 Flow Chart:
   
 ![image](https://github.com/user-attachments/assets/f10cb5e7-2c7b-4d15-8af7-d992e81282a6)
+
 Fig 19.  Circuit Diagram of exp -9
  
 ![image](https://github.com/user-attachments/assets/7738b2a1-29b0-4c97-958a-e90505e3dfb9)
+
 Fig 20.  Simulation of exp -9
 
 ![image](https://github.com/user-attachments/assets/5f750f00-9360-4d7b-a52d-74d242ead8e3)
+
 Fig 21. PLC   Ladder Logic of exp -9
 
 
